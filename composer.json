@@ -1,0 +1,12 @@
+{
+    "name": "oscarmicka/projet_data",
+    "authors": [
+        {
+            "name": "Mickael",
+            "email": "mickael.cecen@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

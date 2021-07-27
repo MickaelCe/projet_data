@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://cdn2.iconfinder.com/data/icons/social-hand-drawn-icons/64/steam-2-512.png" alt="Project logo"></a>
+ <img width=200px height=200px src="public/assets/images/logo.svg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Projet Data</h3>

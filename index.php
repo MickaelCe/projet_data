@@ -1,19 +1,21 @@
 <?php
-
-require 'AltoRouter.php';
-
-$router = new AltoRouter();
-
-// setup routes
-$router->map('GET','/', 'contenu_protege/controleur/controleur.php', 'home');
-
-$match = $router->match();
-
-// do we have a match?
-if($match) {
-  include $match[0];
-} else {
-  echo "c po bien";
-}
-
-?>
+   class Mere{
+      public $attribut="Bonjour.";
+      public function methode1(){
+         $str=$this->attribut;
+         $str.=" Je suis la classe Mère.";
+         return $str;
+      }
+   }
+   class Fille extends Mere{
+      public function methode2(){
+         $str=$this->attribut;
+         $str.=" Je suis la classe Fille.";
+         return $str;
+      }
+   }
+   $objet=new Fille();
+   echo $objet->methode1();
+   echo "<br />";
+   echo $objet->methode2();
+?> 

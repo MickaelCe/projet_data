@@ -5,7 +5,7 @@ require 'AltoRouter.php';
 $router = new AltoRouter();
 
 // setup routes
-$router->map('GET','/', 'contenu_protrgr/controleur/controleur.php', 'home');
+$router->map('GET','/', 'contenu_protege/controleur/controleur.php', 'home');
 
 $match = $router->match();
 
@@ -13,7 +13,6 @@ $match = $router->match();
 if($match) {
   include $match[0];
 } else {
-  header("HTTP/1.0 404 Not Found");
   echo "c po bien";
 }
 

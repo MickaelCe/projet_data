@@ -1,5 +1,5 @@
 <?php 
-$sql = "SELECT img_url FROM steam_game WHERE names LIKE :id";
+$sql = "SELECT img_url, names FROM steam_game WHERE names LIKE :id";
 $exe = ["id" => "%light%"];
 
 $mod = new Model($sql,$exe);

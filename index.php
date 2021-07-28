@@ -4,6 +4,8 @@
 require 'vendor/autoload.php';
 
 
+
+
 $page = 'next';
 
 if (isset($_GET['p'])) {
@@ -12,9 +14,9 @@ if (isset($_GET['p'])) {
 
 function games () {
 $host = "localhost";
-$user = "";
-$password = "";
-$dbname = "";
+$user = "mickael";
+$password = "cocotier";
+$dbname = "projet_data";
 $charset = "utf8";
 
 
@@ -36,6 +38,22 @@ $twig = new Twig\Environment($loader, [
     'cache' =>  false
 ]);
 
-if ($page === 'next'){
+// if ($page === 'next'){
+//     echo $twig->render('next.twig', ['games' => games()]);
+// }
+
+
+$router = new AltoRouter();
+$router->setBasePath('projet_data/');
+
+$router->map('GET', '/', '/public/includes/next.twig');
+
+$match = $router->match();
+if(is_array($match)){
+    $params = $match ['params'];
     echo $twig->render('next.twig', ['games' => games()]);
+    // var_dump($_SERVER);
+}
+else{
+    echo '404';
 }

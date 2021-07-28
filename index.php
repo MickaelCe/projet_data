@@ -17,12 +17,18 @@ $twig = new Twig\Environment($loader, [
 $router = new AltoRouter();
 $router->setBasePath('projet_data/');
 
-$router->map('GET', '/', '/public/includes/next.twig');
+$router->map('GET', '/', function() {
+   require 'public/controller/controller.php';
+});
+$router->map('GET', '/test', function() {
+   require 'public/controller/controller_test.php';
+});
 
 $match = $router->match();
-if(is_array($match)){
-    $params = $match ['params'];
-    echo $twig->render('next.twig');
+if($match !== null){
+    $params = $match['target']();
+   //  echo $twig->render('next.twig');
+   // require 'public/controller/controller.php';
     // var_dump($_SERVER);
 }
 else{

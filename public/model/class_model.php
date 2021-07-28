@@ -36,7 +36,7 @@ class Model{
 }
 
 $sql = "SELECT * FROM steam_game WHERE names LIKE :id";
-$exe = ["id" => "%Among us%"];
+$exe = ["id" => "%dark%"];
 
 $mod = new Model($sql,$exe);
 $test = $mod->selectGame();

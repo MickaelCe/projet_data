@@ -1,5 +1,3 @@
-<input type="text" class="navBar" id="search">
-
 <section id="content">
 
 <?php

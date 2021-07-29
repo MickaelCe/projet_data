@@ -1,5 +1,7 @@
 <?php
 
+include "public/vue/header.html";
+
 require 'vendor/autoload.php';
 include 'public/model/class_model.php';
 
@@ -20,5 +22,7 @@ if(is_array($match)){
 else{
    require 'public/controller/controller_error.php';
 }
+
+include "public/vue/footer.html";
 
 ?> 

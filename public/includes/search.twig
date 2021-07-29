@@ -1,0 +1,47 @@
+{% extends 'layoutsearch.twig' %}
+{% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="public/assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+{% endblock %}
+
+{% block content %}
+    {% for game in games %}
+        <img id="bg" src="{{game.img_url}}">
+    {% endfor %}
+{% endblock %}
+
+{% block contentsearch %}
+    {% for gamesearch in gamesearchs %}
+        <p class ='searchp'>{{gamesearch.names}}</p>
+        <img class='searchimg' src="{{gamesearch.img_url}}">
+    {% endfor %}
+{% endblock %}
+
+{% block contentsearch2 %}
+    {% for gamesearch2 in gamesearchs2 %}
+        <p class ='searchp'>{{gamesearch2.names}}</p>
+        <img class='searchimg' src="{{gamesearch2.img_url}}">
+    {% endfor %}
+{% endblock %}
+
+{% block input %}
+    <div id="searchzone">
+    <input type="text" id="search" placeholder="Search">
+    <button type="submit" id="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+    </div>
+{% endblock %}
+
+{% block logo %}
+            <img id='titlegg' src="public/assets/images/gamersgate.svg">
+{% endblock %}
+
+{% block footer %}
+    <p id="footer">Copyright © - About us</p>
+{% endblock %}
+

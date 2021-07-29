@@ -1,7 +1,27 @@
 {% extends 'layout.twig' %}
 
+{% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="public/assets/css/style.css">      
+{% endblock %}
+
 {% block content %}
     {% for game in games %}
-        <img src="{{game.img_url}}">
+        <img id="bg" src="{{game.img_url}}">
     {% endfor %}
 {% endblock %}
+
+{% block logo %}
+        <section id="accueil">
+            <img src="public/assets/images/logo.svg">
+            <img src="public/assets/images/gamersgate.svg">
+        </section>
+{% endblock %}
+
+{% block footer %}
+    <p id="footer">Copyright © - About us</p>
+{% endblock %}
+

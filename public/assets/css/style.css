@@ -1,8 +1,72 @@
+@font-face {
+    font-family: "Futura-Black";
+    src: url("assets/fonts/futura-black-bold.ttf");
+   }
 
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
-    background-color: brown;
+    margin: 0;
+    padding: 0;
+    background-color: #233237;
+}
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1em 1fr 1fr 1em; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+      "header header header header"
+      "espace1 sectionfilter1 sectionfilter2 espace2"
+      "espace3 sectionfilter3 sectionfilter4 espace4"
+      "espace5 buttonsection1 buttonsection2 espace6"
+      "espace7 gamesection1 gamesection2 espace8"
+      "espace9 gamesection3 gamesection4 espace10"
+      "espace11 gamesection5 gamesection6 espace12"
+      "footer footer footer footer"; 
 }
 
-img {
+#bg {
+    margin:0;
     filter: saturate(0);
+    width: 100vw;
+    height: 15vh;
+    margin-top: -5px;
+}
+
+.container {
+    padding: 0;
+    margin:0;
+    grid-area: 1/1/10/5;
+}
+
+#filter {
+    background-color: #113257c9;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+footer {
+    font-size: 1rem;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+#footer {
+    color: white;
+    font-family: Futura-Black;
+}
+#accueil{
+    grid-area: 1/2/10/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
 }

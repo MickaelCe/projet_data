@@ -26,7 +26,7 @@ $dsn = "mysql:host=" . $host . ";dbname=" . $dbname . ";charset=" . $charset;
 $pdo = new PDO($dsn, $user, $password);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-$games = $pdo->query("SELECT * FROM steam_game LIMIT  1000");
+$games = $pdo->query("SELECT img_url FROM steam_game ORDER BY RAND ( ) LIMIT 6");
 return $games;
 }
 

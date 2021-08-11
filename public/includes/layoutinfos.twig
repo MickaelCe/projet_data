@@ -6,14 +6,11 @@
     <body>
     <div class="wrapper">
         <div id="filter"></div>
-                {% block input %}{% endblock %}
-                <div id='gametop'>{% block contentsearch %}{% endblock %}</div>
-                <div id='gamebot'>{% block contentsearch2 %}{% endblock %}</div>
             <div class="container">{% block content %}{% endblock %}</div>
                 {% block logo %}{% endblock %}
+            {% block img %}{% endblock %}
+            {# <div id="titleinfo">{% block name %}{% endblock %}</div> #}
     <footer>{% block footer %}{% endblock %}</footer>
     </div>
-
-    {# <script src="public/assets/js/search.js"></script> #}
 </body>
 </html>

@@ -14,31 +14,42 @@
     {% endfor %}
 {% endblock %}
 
+
+
+
 {% block contentsearch %}
     {% for gamesearch in gamesearchs %}
-        <p class ='searchp'>{{gamesearch.names}}</p>
         <img class='searchimg' src="{{gamesearch.img_url}}">
+        <p class ='searchp' id ="content">{{gamesearch.names | truncate(15,true,"...")}}</p>
     {% endfor %}
 {% endblock %}
+
+
+
+
 
 {% block contentsearch2 %}
     {% for gamesearch2 in gamesearchs2 %}
-        <p class ='searchp'>{{gamesearch2.names}}</p>
         <img class='searchimg' src="{{gamesearch2.img_url}}">
+        <p class ='searchp'>{{gamesearch2.names  | truncate(15,true,"...")}}</p>
     {% endfor %}
 {% endblock %}
 
+
+
 {% block input %}
-    <div id="searchzone">
-    <input type="text" id="search" placeholder="Search">
+    <form id="searchzone" action='infos' method='get'>
+    <input type="text" id="search" name='nom' placeholder="Search">
     <button type="submit" id="searchButton">
         <i class="fa fa-search"></i>
      </button>
-    </div>
+    </form>
+
+
 {% endblock %}
 
 {% block logo %}
-            <img id='titlegg' src="public/assets/images/gamersgate.svg">
+            <a href = '/projet_data' id='titlegg' ><img  src="public/assets/images/gamersgate.svg"></a>
 {% endblock %}
 
 {% block footer %}

@@ -1,55 +1,21 @@
 <?php
 
 function games () {
-    $host = "localhost";
-    $user = "mickael";
-    $password = "cocotier";
-    $dbname = "projet_data";
-    $charset = "utf8";
-    
-    
-    $dsn = "mysql:host=" . $host . ";dbname=" . $dbname . ";charset=" . $charset;
-    
-    
-    $pdo = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    require 'public/pdo/connexion.php';
     $games = $pdo->query("SELECT img_url FROM steam_game ORDER BY RAND ( ) LIMIT 4");
     return $games;
     };
 
     function games2 () {
-        $host = "localhost";
-        $user = "mickael";
-        $password = "cocotier";
-        $dbname = "projet_data";
-        $charset = "utf8";
-        
-        
-        $dsn = "mysql:host=" . $host . ";dbname=" . $dbname . ";charset=" . $charset;
-        
-        
-        $pdo = new PDO($dsn, $user, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-        $gamesearchs = $pdo->query("SELECT img_url , names FROM steam_game ORDER BY RAND ( ) LIMIT 2");
+        require 'public/pdo/connexion.php';
+        $gamesearchs = $pdo->prepare("SELECT names, img_url FROM steam_game ORDER BY RAND ( ) LIMIT 2");
+        $gamesearchs ->execute(["search" => $search
+        ]);
         return $gamesearchs;
         };
 
         function games3 () {
-            $host = "localhost";
-            $user = "mickael";
-            $password = "cocotier";
-            $dbname = "projet_data";
-            $charset = "utf8";
-            
-            
-            $dsn = "mysql:host=" . $host . ";dbname=" . $dbname . ";charset=" . $charset;
-            
-            
-            $pdo = new PDO($dsn, $user, $password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+            require 'public/pdo/connexion.php';
             $gamesearchs2 = $pdo->query("SELECT names, img_url FROM steam_game ORDER BY RAND ( ) LIMIT 2");
             return $gamesearchs2;
             };
@@ -58,4 +24,5 @@ $loader = new Twig\Loader\FilesystemLoader('public/includes');
 $twig = new Twig\Environment($loader, [
     'cache' =>  false
 ]);
+$twig->addExtension(new Twig_Extensions_Extension_Text());
 echo $twig->render('search.twig', ['games' => games(), 'gamesearchs' => games2(), 'gamesearchs2' => games3()]);

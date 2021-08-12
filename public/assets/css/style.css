@@ -341,3 +341,13 @@ footer {
     text-justify: inter-word;
     margin-top: 5vh;
   }
+
+  #back{
+    z-index: 3;
+    grid-area: gamesection5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 2vh;
+    margin-left: 5vw;
+  }

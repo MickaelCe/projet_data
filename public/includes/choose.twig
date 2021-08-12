@@ -18,7 +18,6 @@
         {% for gamesearch in gamesearchs %} 
             <img id="chooseImg"src="{{gamesearch.img_url}}">
             <section id="title">
-            <p class="infostitle infostitlename"> {{gamesearch.names | truncate(20,false,"...")}}  </p>
                 <form action='infos' id='formChoose' method='get'>
                     <input type="submit" id="search" class='searchChoose' name='nom' value ="{{gamesearch.names}}">
                 </form>
@@ -31,7 +30,9 @@
             <a href = 'search' id='titlegg' ><img src="public/assets/images/gamersgate.svg"></a>
 {% endblock %}
 
-
+{% block back %}
+            <a href ='search' id='btnRandom'><button id="searchButtonRdm">Back</button></a>  
+{% endblock %}
 
 {% block footer %}
     <p id="footer">Copyright © - About us</p>

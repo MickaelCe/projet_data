@@ -19,33 +19,43 @@
 
 {% block contentsearch %}
     {% for gamesearch in gamesearchs %}
+        <div>
         <img class='searchimg' src="{{gamesearch.img_url}}">
-        <p class ='searchp' id ="content">{{gamesearch.names | truncate(15,true,"...")}}</p>
+        <p class ='searchp'>{{gamesearch.names | truncate(15,true,"...")}}</p>
+        </div>
+        <form class='searchForm' action='infos' method='get'>
+            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch.names}}">
+        </form>
     {% endfor %}
 {% endblock %}
 
 
 
-
-
 {% block contentsearch2 %}
     {% for gamesearch2 in gamesearchs2 %}
+        <div>
         <img class='searchimg' src="{{gamesearch2.img_url}}">
         <p class ='searchp'>{{gamesearch2.names  | truncate(15,true,"...")}}</p>
+        </div>
+        <form class='searchForm' action='infos' method='get'>
+            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch2.names}}">
+        </form>
     {% endfor %}
 {% endblock %}
 
 
 
 {% block input %}
-    <form id="searchzone" action='infos' method='get'>
+    <form id="searchzone" action='choose' method='get'>
     <input type="text" id="search" name='nom' placeholder="Search">
     <button type="submit" id="searchButton">
         <i class="fa fa-search"></i>
      </button>
     </form>
+{% endblock %}
 
-
+{% block btnRandom %}
+    <a href ='search' id='btnRandom'><button id="searchButtonRdm">Random</button></a>
 {% endblock %}
 
 {% block logo %}

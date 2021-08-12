@@ -9,6 +9,8 @@
     "require": {
         "twig/twig": "^2.0",
         "altorouter/altorouter": "^2.0",
-        "twig/extensions": "^1.5"
+        "twig/extensions": "^1.5",
+        "twig/markdown-extra": "^3.3",
+        "twig/html-extra": "^3.3"
     }
 }

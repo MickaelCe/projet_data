@@ -18,7 +18,7 @@
         {% for gamesearch in gamesearchs %} 
             <img id="infosimg"src="{{gamesearch.img_url}}">
             <section id="title">
-            <p class="infostitle infostitlename"> {{gamesearch.names | truncate(20,false,"...")}}  </p>
+            <p class="infostitle infostitlename"> {{gamesearch.names}}  </p>
             <p class="infos"> {{gamesearch.dates}} </p>
             </section>
             <section id="categories">
@@ -45,6 +45,10 @@
             <a href = 'search' id='titlegg' ><img src="public/assets/images/gamersgate.svg"></a>
 {% endblock %}
 
+{% block steam %}
+            <p class="infostitle">STEAM PAGE :</p>
+            <a target="_blank" href=""><img id='steamlogo' src="public/assets/images/steam_logo.svg"></a>
+{% endblock %}
 
 
 {% block footer %}

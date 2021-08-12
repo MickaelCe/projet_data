@@ -13,7 +13,9 @@ $router->map('GET', '/search', function() {
 $router->map('GET', '/infos', function() {
     require 'public/vue/infos.php';
 });
-
+$router->map('GET', '/choose', function() {
+    require 'public/vue/choose.php';
+});
 $match = $router->match();
 if($match !== null){
     if (is_callable($match['target'])){

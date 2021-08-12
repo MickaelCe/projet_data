@@ -16,7 +16,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1em 1fr 1fr 1em; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10vh; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
     grid-template-areas: 
       "header header header header"
       "espace1 sectionfilter1 sectionfilter2 espace2"
@@ -39,6 +39,7 @@ body {
 .container {
     padding: 0;
     margin:0;
+    width: 100vw;
     grid-area: 1/1/10/5;
 }
 
@@ -56,8 +57,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -6rem;
     z-index: 3;
+    background-color: #202b38;
 }
 #footer {
     color: white;
@@ -166,6 +167,7 @@ footer {
      height: 7vh;
      justify-self: center;
      border-radius: 5px;
+     border: 2px solid #FB8122;
   }
   .searchp{
     width: 100%;
@@ -190,14 +192,22 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
   }
   .infostitlename{
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: #fff;
       padding-top: 1rem;
+      text-align: justify;
+      text-justify: inter-word;
+  }
+
+  form {
+    width: 100vw;
   }
 
   #infosimg{
@@ -233,4 +243,89 @@ footer {
   #globalreviews{
     grid-area: gamesection2;
     z-index: 3;
+  }
+
+  #choosePage{
+    z-index: 3;
+  }
+
+  .containerChoose{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    grid-area: 2/2/9/4;
+  }
+  #chooseImg{
+    width: 90%;
+  }
+
+  .searchForm{
+    width: 45vw;
+  }
+
+  .searchSearch{
+    width: 50%;
+    border: 2px solid #FB8122;
+    background-color: #FB8122;
+    color: #fff;
+    font-family:Futura-Black ;
+    border-radius: 2px;
+    margin-left: 25%;
+    margin-top: 7vh;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+  }
+  .searchChoose{
+    border: 2px solid #FB8122;
+    background-color: #FB8122;
+    color: #fff;
+    font-family:Futura-Black;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .btnRandom{
+    grid-area: 7/2/8/4;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #btnRandom{
+    background-color:#FB8122 ;
+    border-radius: 5px;
+  }
+  #searchButtonRdm {
+    width: 100%;
+    height: 36px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #FB8122;
+    background: #FB8122;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 2px;
+    font-family:Futura-Black ;
+  }
+
+  #formChoose{
+    display: flex;
+    justify-content: center;
+  }
+
+  #steam{
+    z-index: 3;
+    grid-area: 6/2/8/4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #steamlogo{
+    margin-top: 5vh;
   }

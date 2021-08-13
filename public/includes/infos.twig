@@ -42,7 +42,7 @@
 
 
 {% block logo %}
-            <a href = 'search' id='titlegg' ><img src="public/assets/images/gamersgate.svg"></a>
+            <a href = 'search' id='titlegg' ><img id="titleggSvg" src="public/assets/images/gamersgate.svg"></a>
 {% endblock %}
 
 {% block steam %}
@@ -55,6 +55,26 @@
 {% endblock %}
 
 {% block footer %}
-    <p id="footer">Copyright © - About us</p>
+        <p id="footer">Copyright © - <a class="button" href="#popup2">About us</a></p>
+    <div id="popup2" class="overlay light">
+	<a class="cancel" href="#"></a>
+	<div class="popup">
+		<div class="content">
+            <h2>About Us</h2>
+            <img class='profil' src="public/assets/images/profil1.png">
+            <p>Oscar Millot</p>
+            <section class="social">
+            <a class='sociala' href = 'https://github.com/OscarM-Code' target='_blank'><img  src="public/assets/images/github.svg"></a>
+            <a class='sociala' href = 'https://www.linkedin.com/in/oscar-millot/' target='_blank'><img  src="public/assets/images/linkedin.svg"></a>
+            </section>
+            <img class='profil' src="public/assets/images/profil2.png">
+            <p>Mickael Cecen</p>
+            <section class="social">
+            <a class='sociala' href = 'https://github.com/MickaelCe' target='_blank'><img  src="public/assets/images/github.svg"></a>
+            <a class='sociala' href = 'https://www.linkedin.com/in/mickaelcecen/' target='_blank'><img  src="public/assets/images/linkedin.svg"></a>
+            </section>
+		</div>
+	</div>
+</div>
 {% endblock %}
 

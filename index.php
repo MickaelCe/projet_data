@@ -5,16 +5,16 @@ $router = new AltoRouter();
 $router->setBasePath('projet_data/');
 
 $router->map('GET', '/', function() {
-    require 'public/vue/home.php';
+    require 'public/controleur/controleurHome.php';
 });
 $router->map('GET', '/search', function() {
-    require 'public/vue/search.php';
+    require 'public/controleur/controleurSearch.php';
 });
 $router->map('GET', '/infos', function() {
-    require 'public/vue/infos.php';
+    require 'public/controleur/controleurInfos.php';
 });
 $router->map('GET', '/choose', function() {
-    require 'public/vue/choose.php';
+    require 'public/controleur/controleurChoose.php';
 });
 $match = $router->match();
 if($match !== null){

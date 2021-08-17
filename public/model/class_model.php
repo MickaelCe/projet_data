@@ -20,6 +20,9 @@ class Model{
         try
         {
 	        $bdd = new PDO($dsn, $username, $password);
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+
         }
         catch(Exception $e)
         {
@@ -28,9 +31,8 @@ class Model{
 
         $mdl = $bdd->prepare($this->req);
         $mdl->execute($this->params);
-        $bbb = $mdl->fetchAll(PDO::FETCH_ASSOC);
 
-        return $bbb;
+        return $mdl;
     }
 
 }

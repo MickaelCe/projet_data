@@ -1,0 +1,79 @@
+{% extends 'layoutinfos.twig' %}
+{% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="public/assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+{% endblock %}
+
+{% block content %}
+    {% for game in games %}
+        <img id="bg" src="{{game.img_url}}">
+    {% endfor %}
+{% endblock %}
+
+{% block img %}
+        {% for gamesearch in gamesearchs %} 
+            <img id="infosimg"src="{{gamesearch.img_url}}">
+            <section id="title">
+            <p class="infostitle infostitlename"> {{gamesearch.names}}  </p>
+            <p class="infos"> {{gamesearch.dates}} </p>
+            </section>
+            <section id="categories">
+            <p class="infostitle">CATEGORY</p>
+            <p class="infos"> {{gamesearch.categories | truncate(35 ,false,"...")}}</p>
+            </section>
+            <section id="developer">
+            <p class="infostitle">DEVELOPER</p>
+            <p class="infos"> {{gamesearch.developer }}</p>
+            </section>
+            <section id="userreviews">
+            <p class="infostitle">USER REVIEWS</p>
+            <p class="infos"> {{gamesearch.user_reviews}}</p>
+            </section>
+            <section id="globalreviews">
+            <p class="infostitle">ALL REVIEWS</p>
+            <p class="infos"> {{gamesearch.all_reviews }}</p>
+            </section>    
+        {% endfor %}
+{% endblock %}
+
+
+{% block logo %}
+            <a href = 'search' id='titlegg' ><img id="titleggSvg" src="public/assets/images/gamersgate.svg"></a>
+{% endblock %}
+
+{% block steam %}
+            <p class="infostitleSteam">STEAM PAGE :</p>
+            <a target="_blank" href=""><img id='steamlogo' src="public/assets/images/steam_logo.svg"></a>
+{% endblock %}
+
+{% block back %}
+            <a href ='search' id='btnRandom'><button id="searchButtonRdm">Back</button></a>  
+{% endblock %}
+
+{% block footer %}
+        <p id="footer">Copyright © - <a class="button" href="#popup2">About us</a></p>
+    <div id="popup2" class="overlay light">
+	<a class="cancel" href="#"></a>
+	<div class="popup">
+		<div class="content">
+            <h2>About Us</h2>
+            <img class='profil' src="public/assets/images/profil1.png">
+            <p>Oscar Millot</p>
+            <section class="social">
+            <a class='sociala' href = 'https://github.com/OscarM-Code' target='_blank'><img  src="public/assets/images/github.svg"></a>
+            <a class='sociala' href = 'https://www.linkedin.com/in/oscar-millot/' target='_blank'><img  src="public/assets/images/linkedin.svg"></a>
+            </section>
+            <img class='profil' src="public/assets/images/profil2.png">
+            <p>Mickael Cecen</p>
+            <section class="social">
+            <a class='sociala' href = 'https://github.com/MickaelCe' target='_blank'><img  src="public/assets/images/github.svg"></a>
+            <a class='sociala' href = 'https://www.linkedin.com/in/mickaelcecen/' target='_blank'><img  src="public/assets/images/linkedin.svg"></a>
+            </section>
+		</div>
+	</div>
+</div>
+{% endblock %}

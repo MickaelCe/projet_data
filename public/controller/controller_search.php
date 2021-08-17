@@ -1,6 +1,6 @@
 <?php
 
-require "../model/class_model.php";
+require "public/model/class_model.php";
 
 $value = "";
 if(isset($_GET["search"]) && !empty($_GET["search"]))
@@ -9,11 +9,25 @@ if(isset($_GET["search"]) && !empty($_GET["search"]))
 } else {
     $value = "error";
 }
-echo $value;
+
 $search = "%$value%";
 
-require "../model/model_search.php";
+require "public/model/model_search.php";
 
-require "../vue/vue_search.php";
+$mod = "";
+
+if(empty($_GET["search"]))
+{
+    $mod = new Model($sqlE,$exeE);
+} else {
+    $mod = new Model($sql,$exe);
+}
+
+$test = $mod->selectGame();
+
+
+
+
+require "public/vue/vue_search.php";
 
 ?>

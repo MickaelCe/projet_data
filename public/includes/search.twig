@@ -24,7 +24,7 @@
         <p class ='searchp'>{{gamesearch.names | truncate(15,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch.names}}">
+            <input type="submit" class="searchSearch" name='names' value ="{{gamesearch.names}}">
         </form>
     {% endfor %}
 {% endblock %}
@@ -38,7 +38,7 @@
         <p class ='searchp'>{{gamesearch2.names  | truncate(15,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch2.names}}">
+            <input type="submit" class="searchSearch" name='names' value ="{{gamesearch2.names}}">
         </form>
     {% endfor %}
 {% endblock %}
@@ -47,7 +47,7 @@
 
 {% block input %}
     <form id="searchzone" action='choose' method='get'>
-    <input type="text" id="search" name='nom' placeholder="Search">
+    <input type="text" id="search" name='names' placeholder="Search">
     <button type="submit" id="searchButton">
         <i class="fa fa-search"></i>
      </button>

@@ -11,7 +11,7 @@ function ajaxSearch() {
     xhr.open("GET", "public/controller/controller_search.php?search=" + searchValue);
     xhr.onload = function() {
         if(xhr.status === 200){
-            document.querySelector("#content").innerHTML = xhr.responseText;
+            document.querySelector("searchPossibility").innerHTML = xhr.responseText;
             console.log(xhr.status);
         } else {
             console.log(xhr.status);

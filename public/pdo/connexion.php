@@ -2,8 +2,8 @@
 
 
 $host = "localhost";
-$user = "";
-$password = "";
+$user = "mickael";
+$password = "cocotier";
 $dbname = "projet_data";
 $charset = "utf8";
 

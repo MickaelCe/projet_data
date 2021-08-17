@@ -12,13 +12,13 @@ $router->map('GET', '/', function() {
    require 'public/controller/controller_home.php';
 });
 $router->map('GET', '/search', function() {
-   require 'public/controleur/controleur_search.php';
+   require 'public/controller/controller_search.php';
 });
 $router->map('GET', '/infos', function() {
-   require 'public/controleur/controleur_infos.php';
+   require 'public/controller/controller_infos.php';
 });
 $router->map('GET', '/choose', function() {
-   require 'public/controleur/controleur_choose.php';
+   require 'public/controller/controller_choose.php';
 });
 
 $match = $router->match();

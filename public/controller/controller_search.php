@@ -1,29 +1,35 @@
 <?php
 
-require "public/model/class_model.php";
+// $value = "";
+// if(isset($_GET["search"]) && !empty($_GET["search"]))
+// {
+//     $value = $_GET["search"];
+// } else {
+//     $value = "error";
+// }
 
-$value = "";
-if(isset($_GET["search"]) && !empty($_GET["search"]))
-{
-    $value = $_GET["search"];
-} else {
-    $value = "error";
-}
-
-$search = "%$value%";
+// $search = "%$value%";
 
 require "public/model/model_search.php";
 
-$mod = "";
+$mod = new Model($sql, $exe);
+$mod_two = new Model($sql_two, $exe_two);
+$mod_three = new Model($sql_three, $exe_three);
 
-if(empty($_GET["search"]))
-{
-    $mod = new Model($sqlE,$exeE);
-} else {
-    $mod = new Model($sql,$exe);
-}
+$render = $mod->selectGame();
+$render_two = $mod_two->selectGame();
+$render_three = $mod_three->selectGame();
 
-$test = $mod->selectGame();
+// $mod = "";
+
+// if(empty($_GET["search"]))
+// {
+//     $mod = new Model($sqlE,$exeE);
+// } else {
+//     $mod = new Model($sql,$exe);
+// }
+
+// $test = $mod->selectGame();
 
 
 

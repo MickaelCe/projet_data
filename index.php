@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 
 $router = new AltoRouter();
-$router->setBasePath('projet_data/');
+$router->setBasePath('projet_data_v1/');
 
 $router->map('GET', '/', function() {
     require 'public/controleur/controleurHome.php';
@@ -16,23 +16,27 @@ $router->map('GET', '/infos', function() {
 $router->map('GET', '/choose', function() {
     require 'public/controleur/controleurChoose.php';
 });
+$router->map('GET', '/[*]', function() {
+    switch ($i=random_int(0,2)) {
+        case 0:
+            require 'public/vue/4042.php';
+            break;
+        case 1:
+            require 'public/vue/4043.php';
+            break;
+        case 2:
+            require 'public/vue/404.php';
+            break;
+    }
+});
+
 $match = $router->match();
 if($match !== null){
     if (is_callable($match['target'])){
         call_user_func($match['target']);
     } 
     else {
-        switch ($i=random_int(0,2)) {
-            case 0:
-                require 'public/vue/4042.php';
-                break;
-            case 1:
-                require 'public/vue/4043.php';
-                break;
-            case 2:
-                require 'public/vue/404.php';
-                break;
-        }
+        echo'bruh';
     }
 } else {
 echo'bruh';

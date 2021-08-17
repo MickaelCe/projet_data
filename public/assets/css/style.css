@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #233237;
+    overflow: hidden;
 }
 .wrapper{
     height: 100vh;
@@ -169,9 +170,10 @@ footer {
       "titlebotrigth";
 }
   .searchimg{
-     width: 100%;
-     height: 7vh;
+     width: 90%;
+     height: 8vh;
      justify-self: center;
+     align-self: center;
      border-radius: 5px;
      border: 2px solid #FB8122;
   }
@@ -263,6 +265,9 @@ footer {
       align-items: center;
       z-index: 3;
       grid-area: 2/2/7/4;
+      border: solid #FB8122 3px;
+      border-radius: 5px;
+      padding-top: 1rem;
   }
   #chooseImg{
     width: 90%;
@@ -270,19 +275,42 @@ footer {
 
   .searchForm{
     width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .searchSearch{
     width: 50%;
-    border: 2px solid #FB8122;
-    background-color: #FB8122;
-    color: #fff;
+    border: 2px solid #fb802200;
+    background-color: #fb802200;
+    color: #fb802200;
     font-family:Futura-Black ;
     border-radius: 2px;
-    margin-left: 25%;
-    margin-top: 7vh;
-    padding: 5px 5px 5px 5px;
+    z-index: 4;
+    padding: 8px 8px 8px 87px;
     cursor: pointer;
+  }
+
+  .searchSearchHover{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family:Futura-Black ;
+    font-size: 0.7rem;
+    margin-top:-1.5rem ;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid #fb8022;
+    background-color: #fb8022;
+    padding: 8px 8px 8px 8px;
+    border-radius: 3px;
+    
+  }
+
+  .fas.fa-chevron-circle-right{
+    padding-left: 0.5rem;
   }
   .searchChoose{
     border: 2px solid #FB8122;
@@ -392,11 +420,12 @@ footer {
  }
   .overlay.light {
     background: rgba(255, 255, 255, 0.5);
+    height: 120vh;
  }
   .overlay .cancel {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 120vh;
     cursor: default;
  }
 
@@ -410,7 +439,7 @@ footer {
   .popup {
     background: #233237;
     border: 3px solid #FB8122;
-    height: 70vh;
+    height: 80vh;
     width: 80vw;
     margin-top: 10vh;
     margin-left: 10vw;

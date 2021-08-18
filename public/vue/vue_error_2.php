@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="public/assets/css/style.css">
     <title>404</title>
 </head>
-<body>
+<body onload="autoNotify()">
+
+<audio id="notifypop" src="public/assets/audio/gta.mp3"></audio>
 
 <section id="gta_404">
 <h2>ERROR 404</h2>
 <a href="search">Accueil</a>
 </section>
     
+<script src="public/assets/js/song.js"></script>
+
 </body>
 </html>

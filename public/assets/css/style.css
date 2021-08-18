@@ -3,6 +3,21 @@
     src: url("/projet_data/public/assets/fonts/Futura Extra Black font.ttf");
    }
 
+@font-face {
+    font-family: "amogus";
+    src: url("/projet_data/public/assets/fonts/amogus.ttf");
+}
+
+@font-face {
+  font-family: "gta";
+  src: url("/projet_data/public/assets/fonts/gta.otf");
+}
+
+@font-face {
+  font-family: "minecraft";
+  src: url("/projet_data/public/assets/fonts/Minecraft.ttf");
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -507,7 +522,125 @@ h2{
   .popup p:last-child {
     margin: 0;
  }
-  
+
+ /* -------error404_amogus---- */
+
+ #amogus_404
+ {
+   height: 100vh;
+   width: 100vw;
+   background-image: url(../images/amogus_bg.png);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #amogus_404 img
+ {
+   height: 20vh;
+ }
+
+ #amogus_404 div
+ {
+   display: flex;
+ }
+
+ #amogus_404 a
+ {
+   color: #fff;
+   font-family: "amogus";
+   margin-top: 5vh;
+   font-size: 3rem;
+ }
+
+ .error4
+ {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(103%) contrast(103%);
+ }
+
+ #red_amogus
+ {
+   position: absolute;
+   transform: rotateZ(45deg) scale(0.2);
+   bottom: 5vh;
+   right: 15vw;
+ }
+
+ /* -------error404_gta---- */
+
+#gta_404
+ {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/gta_bg.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "gta";
+  font-size: 3rem;
+  color: #c05d63;
+  -webkit-text-stroke: 3px black;
+}
+
+#gta_404 a
+{
+  color: #c05d63;
+}
+
+/* -------error404_minecraft---- */
+
+#minecraft_404
+ {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(255, 0, 0, 0.2)), url(../images/minecraft_bg.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "minecraft";
+  color: #ffffff;
+}
+
+#minecraft_404 div
+{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#minecraft_404 span
+{
+  color: rgb(255, 238, 0);
+}
+
+#minecraft_404 h2
+{
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#minecraft_404 a
+{
+  text-decoration: none;
+  width: 80vw;
+  height: 5vh;
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(71, 71, 71);
+  border: 2px solid black;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
  @media all and (min-width: 1024px) and (max-width: 2560px){
 
     #accueil{
@@ -689,6 +822,47 @@ h2{
     #steam{
       width: 50vw;
       grid-area:gamesection4;
+    }
+
+    #amogus_404 a
+    {
+      text-decoration: none;
+      font-size: 5rem;
+      transition: 0.5s;
+      margin-top: 10vh;
+    }
+
+    #amogus_404 a:hover
+    {
+      transform: scale(1.2);
+    }
+
+    #gta_404 a
+    {
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    #gta_404
+    {
+      font-size: 5rem;
+    }
+
+    #gta_404 a:hover
+    {
+      transform: scale(1.2);
+    }
+
+    #minecraft_404 a
+    {
+      width: 55vw;
+      height: 7.5vh;
+      font-size: 2rem;
+    }
+
+    #minecraft_404 a:hover
+    {
+      background-color: rgb(110, 110, 110);
     }
 
   }

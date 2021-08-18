@@ -60,6 +60,7 @@ footer {
     align-items: center;
     z-index: 3;
     background-color: #202b38;
+    border-top: #FB8122 1px solid;
 }
 #footer {
     color: white;
@@ -154,7 +155,7 @@ footer {
       "imgtopleft"
       "titletopleft"
       "imgbotleft"
-      "titlebotleft"; 
+      "titlebotleft";
 }
 
   #gamebot{
@@ -551,7 +552,6 @@ h2{
       justify-self: center;
       
     }
-
     #bg{
       height:100vh;
     }
@@ -601,9 +601,7 @@ h2{
       border-radius: 5px;
       border:solid #FB8122
     }
-    #search{
-      width: 10vw;
-    }
+
     .containerChoose{
       overflow: scroll;
       overflow-x: hidden;
@@ -612,6 +610,8 @@ h2{
       align-items: center;
       z-index: 3;
       grid-area: 2/2/7/4;
+      width: 50vw;
+      margin-left: 25vw;
     }
     .containerChoose::-webkit-scrollbar{
       display: none;
@@ -691,4 +691,14 @@ h2{
       grid-area:gamesection4;
     }
 
+  #gametop{
+      border-right: solid  #FB8122;
+}
+
+  #gamebot{
+      border-left: solid  #FB8122;
+}
+
+
   }
+

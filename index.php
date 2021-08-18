@@ -19,13 +19,13 @@ $router->map('GET', '/choose', function() {
 $router->map('GET', '/[*]', function() {
     switch ($i=random_int(0,2)) {
         case 0:
-            require 'public/vue/4042.php';
+            require 'public/vue/vue_error_1.php';
             break;
         case 1:
-            require 'public/vue/4043.php';
+            require 'public/vue/vue_error_2.php';
             break;
         case 2:
-            require 'public/vue/404.php';
+            require 'public/vue/vue_error_3.php';
             break;
     }
 });

@@ -37,7 +37,11 @@
             <section id="globalreviews">
             <p class="infostitle">ALL REVIEWS</p>
             <p class="infos"> {{gamesearch.all_reviews }}</p>
-            </section>    
+            </section>
+            <section id="steam">
+            <p class="infostitleSteam">STEAM PAGE :</p>
+            <a target="_blank" href="{{gamesearch.link}}"><img id='steamlogo' src="public/assets/images/steam_logo.svg"></a>
+            </section>   
         {% endfor %}
 {% endblock %}
 

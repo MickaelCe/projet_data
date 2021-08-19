@@ -1,6 +1,6 @@
 <?php
 
-$names = $_GET["names"];
+$id = $_GET["id"];
 
 require 'public/model/model_infos.php';
 

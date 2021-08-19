@@ -25,7 +25,7 @@
         <p class ='searchp'>{{gamesearch.names | truncate(15,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='names' value ="{{gamesearch.names}}">
+            <input type="submit" class="searchSearch" name='id' value ="{{gamesearch.id}}">
             <p class='searchSearchHover'>More Infos <i class="fas fa-chevron-circle-right"></i></p>
         </form>
         
@@ -41,7 +41,7 @@
         <p class ='searchp'>{{gamesearch2.names  | truncate(15,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='names' value ="{{gamesearch2.names}}">
+            <input type="submit" class="searchSearch" name='id' value ="{{gamesearch2.id}}">
             <p class='searchSearchHover' unselectable="on">More Infos <i class="fas fa-chevron-circle-right"></i></p>
         </form>
         

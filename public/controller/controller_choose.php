@@ -1,6 +1,7 @@
 <?php
+
 $names = $_GET['names'];
-echo $names;
+
 require 'public/model/model_choose.php';
 
 $mod = new Model($req, $exe);

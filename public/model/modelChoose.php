@@ -6,8 +6,8 @@ function games () {
     };
 function games2 () {
     require 'public/pdo/connexion.php';
-        $nom = $_GET['nom'];
-        $gamesearchs = $pdo->query("SELECT * FROM steam_game WHERE names LIKE '%$nom%' AND names NOT LIKE '%dlc%' AND names NOT LIKE '%Season Pass%' ORDER BY names ASC");
+        $nom = $_GET['id'];
+        $gamesearchs = $pdo->query("SELECT * FROM steam_game WHERE names LIKE '$nom%' AND names NOT LIKE '%dlc%' AND names NOT LIKE '%Season Pass%' ORDER BY names ASC");
         return $gamesearchs;
     };
 

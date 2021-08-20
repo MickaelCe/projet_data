@@ -22,10 +22,10 @@
     {% for gamesearch in gamesearchs %}
         <div class='searchimgdiv'>
         <img class='searchimg' src="{{gamesearch.img_url}}">
-        <p class ='searchp'>{{gamesearch.names | truncate(15,true,"...")}}</p>
+        <p class ='searchp'>{{gamesearch.names | truncate(40,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch.names}}">
+            <input type="submit" class="searchSearch" name='id' value ="{{gamesearch.id}}">
             <p class='searchSearchHover'>More Infos <i class="fas fa-chevron-circle-right"></i></p>
         </form>
         
@@ -38,10 +38,10 @@
     {% for gamesearch2 in gamesearchs2 %}
         <div class='searchimgdiv'>
         <img class='searchimg' src="{{gamesearch2.img_url}}">
-        <p class ='searchp'>{{gamesearch2.names  | truncate(15,true,"...")}}</p>
+        <p class ='searchp'>{{gamesearch2.names  | truncate(40,true,"...")}}</p>
         </div>
         <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='nom' value ="{{gamesearch2.names}}">
+            <input type="submit" class="searchSearch" name='id' value ="{{gamesearch2.id}}">
             <p class='searchSearchHover' unselectable="on">More Infos <i class="fas fa-chevron-circle-right"></i></p>
         </form>
         
@@ -52,15 +52,17 @@
 
 {% block input %}
     <form id="searchzone" name="myform" action='choose' method='get'>
-    <input type="text" id="search" name='nom' placeholder="Search" value="">
+    <input type="text" id="search" name='id' placeholder="Search" value="">
     <button type="submit" id="searchButton" >
         <i class="fa fa-search"></i>
      </button>
+     
     </form>
+    <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
 {% endblock %}
 
 {% block btnRandom %}
-    <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
+    
 {% endblock %}
 
 {% block logo %}

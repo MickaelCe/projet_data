@@ -6,8 +6,8 @@ function games () {
     };
 function games2 () {
     require 'public/pdo/connexion.php';
-        $nom = $_GET['nom'];
-        $gamesearchs = $pdo->query("SELECT * FROM steam_game WHERE names LIKE '$nom' LIMIT 1");
+        $nom = $_GET['id'];
+        $gamesearchs = $pdo->query("SELECT * FROM steam_game WHERE id LIKE '$nom' LIMIT 1 ") ;
         return $gamesearchs;
     };
 ?>

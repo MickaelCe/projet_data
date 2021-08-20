@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Futura-Black";
-    src: url("/projet_data/public/assets/fonts/Futura Extra Black font.ttf");
+    src: url("/projet_data_v1/public/assets/fonts/Futura Extra Black font.ttf");
    }
 
 @font-face {
     font-family: "amogus";
-    src: url("/projet_data/public/assets/fonts/amogus.ttf");
+    src: url("/projet_data_v1/public/assets/fonts/amogus.ttf");
 }
 
 @font-face {
   font-family: "gta";
-  src: url("/projet_data/public/assets/fonts/gta.otf");
+  src: url("/projet_data_v1/public/assets/fonts/gta.otf");
 }
 
 @font-face {
   font-family: "minecraft";
-  src: url("/projet_data/public/assets/fonts/Minecraft.ttf");
+  src: url("/projet_data_v1/public/assets/fonts/Minecraft.ttf");
 }
 
 *{
@@ -132,6 +132,7 @@ footer {
     justify-self: center;
     display: flex;
     width: 80%;
+    margin-left: -15vw;
 }
 
 #search{
@@ -247,6 +248,10 @@ footer {
   #title{
     grid-area: 3/2/4/4;
     z-index: 3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   #categories{
@@ -329,15 +334,29 @@ footer {
     padding-left: 0.5rem;
   }
   .searchChoose{
-    border: 2px solid #FB8122;
-    background-color: #FB8122;
-    color: #fff;
+    border: 2px solid #fb802200;
+    background-color: #fb802200;
+    color: rgba(255, 255, 255, 0);
     font-family:Futura-Black;
     cursor: pointer;
     border-radius: 2px;
     margin-top: 2vh;
     margin-bottom: 2vh;
     padding: 5px 5px 5px 5px;
+    z-index:5;
+    padding-left:5rem ;
+  }
+  .searchChooseHover{
+    border: 2px solid #fb8022;
+    background-color: #fb8022;
+    color: rgb(255, 255, 255);
+    font-family:Futura-Black;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: -5vh;
+    margin-bottom: 2vh;
+    padding: 5px 5px 5px 5px;
+    z-index:3;
   }
 
   .btnRandom{
@@ -350,6 +369,11 @@ footer {
   #btnRandom{
     background-color:#FB8122 ;
     border-radius: 5px;
+    margin-left: 30vw;
+    grid-area: sectionfilter2;
+    z-index: 3;
+    align-self: center;
+    justify-self: center;
   }
   #searchButtonRdm {
     width: 100%;
@@ -366,9 +390,21 @@ footer {
     font-family:Futura-Black ;
   }
 
+  #btnRandom2{
+    background-color:#FB8122 ;
+    border-radius: 5px;
+    margin-left: 0vw;
+    grid-area: sectionfilter2;
+    z-index: 3;
+    align-self: center;
+    justify-self: center;
+  }
+
   #formChoose{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   #steam{
@@ -444,7 +480,11 @@ footer {
     height: 120vh;
     cursor: default;
  }
-
+ .searchimgdiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
  .content{
    margin-top: 5vh;
  }
@@ -538,7 +578,7 @@ h2{
 
  #amogus_404 img
  {
-   height: 20vh;
+   height: 15vh;
  }
 
  #amogus_404 div
@@ -549,9 +589,9 @@ h2{
  #amogus_404 a
  {
    color: #fff;
-   font-family: "amogus";
    margin-top: 5vh;
    font-size: 3rem;
+   font-family: 'amogus';
  }
 
  .error4
@@ -669,7 +709,9 @@ h2{
       justify-self: flex-start;
       margin: 1rem 1rem;
     }
-  
+    #btnRandom{
+      margin-right: 25vw;
+    }
     #logogg{
       grid-area: 4/2/5/4;
       justify-self: center;
@@ -684,14 +726,26 @@ h2{
       
     }
     #bg{
-      height:100vh;
+      height:50vh;
+      width: 50vw;
+    }
+    #btnRandom{
+      margin-left: 0vw;
     }
     .container{
+      display:flex;
+      flex-direction:column;
+      flex-wrap: wrap;
       overflow: hidden;
     }
 
+    /* .searchChooseHover{
+      margin-left: -5vw;
+    } */
+
     #searchzone{
       width: 20vw;
+      margin-left: 0vw;
     }
 
     #titlegg{
@@ -773,8 +827,8 @@ h2{
       justify-self: space-between;
       align-self: center;
       font-size: 1rem;
-
     }
+    
     #categories{
       width: 25vw;
       margin-top: 5vh;
@@ -784,6 +838,9 @@ h2{
       align-items: center;
       flex-direction: column;
       font-size: 2rem;
+      border-right: #FB8122 solid 3px;
+      border-top: #FB8122 solid 3px;
+
     }
     #developer{
       width: 25vw;
@@ -795,6 +852,8 @@ h2{
       align-items: center;
       flex-direction: column;
       font-size: 2rem;
+      border-left: #FB8122 solid 3px;
+      border-top: #FB8122 solid 3px;
     }
     #userreviews{
       width: 25vw;
@@ -805,6 +864,7 @@ h2{
       flex-direction: column;
       font-size: 2rem;
       height: 40vh;
+      border-right: #FB8122 solid 3px;
     }
     #globalreviews{
       width: 25vw;
@@ -816,10 +876,12 @@ h2{
       flex-direction: column;
       font-size: 2rem;
       height: 40vh;
+      border-left: #FB8122 solid 3px;
     }
     #steam{
       width: 50vw;
       grid-area:gamesection4;
+      border-top: #FB8122 solid 4px;
     }
 
   #gametop{

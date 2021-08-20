@@ -7,13 +7,13 @@ function games () {
 
     function games2 () {
         require 'public/pdo/connexion.php';
-        $gamesearchs = $pdo->query("SELECT names, img_url FROM steam_game ORDER BY RAND ( ) LIMIT 2");
+        $gamesearchs = $pdo->query("SELECT * FROM steam_game ORDER BY RAND ( ) LIMIT 2");
         return $gamesearchs;
         };
 
         function games3 () {
             require 'public/pdo/connexion.php';
-            $gamesearchs2 = $pdo->query("SELECT names, img_url FROM steam_game ORDER BY RAND ( ) LIMIT 2");
+            $gamesearchs2 = $pdo->query("SELECT * FROM steam_game ORDER BY RAND ( ) LIMIT 2");
             return $gamesearchs2;
             };
 ?>

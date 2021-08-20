@@ -19,10 +19,14 @@
         {% for gamesearch in gamesearchs %} 
             <img id="chooseImg"src="{{gamesearch.img_url}}">
             <section id="title">
+                <div>
                 <form action='infos' id='formChoose' method='get'>
-                    <input type="submit" id="search" class='searchChoose' name='nom' value ="{{gamesearch.names}}">
+                <input type="submit" class="searchChoose" name='id' value ="{{gamesearch.id}}">
+                <p class='searchChooseHover'>More Infos <i class="fas fa-chevron-circle-right"></i></p>
                 </form>
-            </section>   
+                </div>
+                    
+            </section>
         {% endfor %}
 {% endblock %}
 
@@ -32,7 +36,7 @@
 {% endblock %}
 
 {% block back %}
-            <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-chevron-circle-left"></i></button></a>  
+            <a href ='search' id='btnRandom2'><button id="searchButtonRdm"><i class="fas fa-chevron-circle-left"></i></button></a>  
 {% endblock %}
 
 {% block footer %}

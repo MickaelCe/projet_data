@@ -10,7 +10,7 @@
 
 {% block content %}
     {% for game in games %}
-        <img id="bg" src="{{game.img_url}}">
+        <img class="bg" src="{{game.img_url}}">
     {% endfor %}
 {% endblock %}
 
@@ -19,8 +19,7 @@
             <img id="chooseImg"src="{{gamesearch.img_url}}">
             <section id="title">
                 <form action='infos' id='formChoose' method='get'>
-                    <input type="submit" id="search" class='searchChoose' name='id' value ="{{gamesearch.id}}">
-                    <p class='searchChooseHover' unselectable="on">More Infos <i class="fas fa-chevron-circle-right"></i></p>
+                    <input type="submit" id="search" class='searchChoose' name='id' value ="{{gamesearch.id}}">coucou</input>
                 </form>
             </section>   
         {% endfor %}

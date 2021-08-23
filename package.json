@@ -1,0 +1,22 @@
+{
+  "name": "projet_data",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"\" rel=\"noopener\">  <img width=200px height=200px src=\"public/assets/images/logo.svg\" alt=\"Project logo\"></a> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MickaelCe/projet_data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MickaelCe/projet_data/issues"
+  },
+  "homepage": "https://github.com/MickaelCe/projet_data#readme",
+  "dependencies": {
+    "howler": "^2.2.3"
+  }
+}

@@ -1,6 +1,8 @@
 <?php
 
-$names = $_GET['names'];
+$name = $_GET['names'];
+
+$names = "%$name%";
 
 require 'public/model/model_choose.php';
 

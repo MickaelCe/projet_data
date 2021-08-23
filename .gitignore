@@ -8,6 +8,8 @@ bin-release/
 .settings/
 /vendor
 public/model/access.php
+node_modules
+package-lock.json
 
 # Executables
 *.swf

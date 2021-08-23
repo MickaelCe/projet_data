@@ -1,868 +1,956 @@
 @font-face {
-    font-family: "Futura-Black";
-    src: url("/projet_data/public/assets/fonts/Futura Extra Black font.ttf");
-   }
+  font-family: "Futura-Black";
+  src: url("/projet_data/public/assets/fonts/Futura Extra Black font.ttf");
+ }
 
 @font-face {
-    font-family: "amogus";
-    src: url("/projet_data/public/assets/fonts/amogus.ttf");
+  font-family: "amogus";
+  src: url("/projet_data/public/assets/fonts/amogus.ttf");
 }
 
 @font-face {
-  font-family: "gta";
-  src: url("/projet_data/public/assets/fonts/gta.otf");
+font-family: "gta";
+src: url("/projet_data/public/assets/fonts/gta.otf");
 }
 
 @font-face {
-  font-family: "minecraft";
-  src: url("/projet_data/public/assets/fonts/Minecraft.ttf");
+font-family: "minecraft";
+src: url("/projet_data/public/assets/fonts/Minecraft.ttf");
 }
 
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #233237;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #233237;
+  overflow: hidden;
 }
 .wrapper{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1em 1fr 1fr 1em; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
-    grid-template-areas: 
-      "header header header header"
-      "espace1 sectionfilter1 sectionfilter2 espace2"
-      "espace3 sectionfilter3 sectionfilter4 espace4"
-      "espace5 buttonsection1 buttonsection2 espace6"
-      "espace7 gamesection1 gamesection2 espace8"
-      "espace9 gamesection3 gamesection4 espace10"
-      "espace11 gamesection5 gamesection6 espace12"
-      "footer footer footer footer"; 
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
+  grid-template-areas: 
+    "header header header header"
+    "espace1 sectionfilter1 sectionfilter2 espace2"
+    "espace3 sectionfilter3 sectionfilter4 espace4"
+    "espace5 buttonsection1 buttonsection2 espace6"
+    "espace7 gamesection1 gamesection2 espace8"
+    "espace9 gamesection3 gamesection4 espace10"
+    "espace11 gamesection5 gamesection6 espace12"
+    "footer footer footer footer"; 
 }
 
-#bg {
-    margin:0;
-    filter: saturate(0);
-    width: 100vw;
-    height: 20vh;
-    margin-top: -5px;
+.wrapper2{
+  min-height: 100vh;
+  max-height: 125vh;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em; 
+  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 5vh; 
+  grid-template-areas: 
+    "header header header header"
+    "espace1 sectionfilter1 sectionfilter2 espace2"
+    "espace3 sectionfilter3 sectionfilter4 espace4"
+    "espace5 buttonsection1 buttonsection2 espace6"
+    "espace7 gamesection1 gamesection2 espace8"
+    "espace9 gamesection3 gamesection4 espace10"
+    "espace11 gamesection5 gamesection6 espace12"
+    "footer footer footer footer"; 
+}
+
+.bg {
+  margin:0;
+  filter: saturate(0);
+  width: 100vw;
+  height: 20vh;
+  margin-top: -5px;
+}
+
+.bg2 {
+  margin:0;
+  filter: saturate(0);
+  width: 100vw;
+  min-height: 20vh;
+  margin-top: -5px;
 }
 
 .container {
-    padding: 0;
-    margin:0;
-    width: 100vw;
-    grid-area: 1/1/10/5;
+  padding: 0;
+  margin:0;
+  width: 100vw;
+  grid-area: 1/1/10/5;
 }
 
 #filter {
-    background-color: #202b38c9;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
+  background-color: #202b38c9;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
 footer {
-    font-size: 1rem;
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    background-color: #202b38;
+  font-size: 1rem;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: #202b38;
+  border-top: #FB8122 1px solid;
 }
 #footer {
-    color: white;
-    font-family: Futura-Black;
+  color: white;
+  font-family: Futura-Black;
 }
 #accueil{
-    grid-area: 1/2/10/4;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    z-index: 3;
+  grid-area: 1/2/10/4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
 }
 #accueil :nth-child(1) {
-    margin-top: -10vh;
-    margin-bottom: -25vh;
+  margin-top: -10vh;
+  margin-bottom: -25vh;
 }
 #accueil :nth-child(2) {
-    margin-bottom: -30vh;
+  margin-bottom: -30vh;
 }
 
 .infostitle.infostitlename{
-  font-size: 1.5rem;
-  color: #FB8122;
+font-size: 1.5rem;
+color: #FB8122;
 } 
 
 #btn-accueil{
-    font-family: Futura-Black;
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-    border: 5px solid;
-    border-color: #FB8122;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 7px 20px 7px 20px;
+  font-family: Futura-Black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: 5px solid;
+  border-color: #FB8122;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 7px 20px 7px 20px;
 }
 
 #btn-accueil:hover{
-	color: #FB8122;
-    background-color: rgb(255, 255, 255);
+color: #FB8122;
+  background-color: rgb(255, 255, 255);
 }
 
 #titlegg{
-    z-index: 3;
-    grid-area: header;
-    align-self: center;
-    justify-self: center;
+  z-index: 3;
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
 }
 
 #searchzone{
-    z-index: 3;
-    grid-area: 2/2/3/4;
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    width: 80%;
+  z-index: 3;
+  grid-area: 2/2/3/4;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  width: 80%;
+  margin-left: -15vw;
 }
 
 #search{
-    width: 76%;
-    height: 32px;
-    margin-right: -5px;
-    border: 2px solid #FB8122;
-    border-radius: 2px;
-    padding-left: 5px;
+  width: 76%;
+  height: 32px;
+  margin-right: -5px;
+  border: 2px solid #FB8122;
+  border-radius: 2px;
+  padding-left: 5px;
 }
 
 
 #searchButton {
-    width: 22%;
-    height: 36px;
-    padding: 6px;
-    border: 1px solid #FB8122;
-    background: #FB8122;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 2px;
-  }
-  #searchButtonA {
-    background: #FB8122;
-    border-radius: 2px;
-  }
-  #gametop{
-    grid-area: 3/2/7/3;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: 7vh 1fr 7vh 1fr; 
-    grid-template-areas: 
-      "imgtopleft"
-      "titletopleft"
-      "imgbotleft"
-      "titlebotleft"; 
+  width: 22%;
+  height: 36px;
+  padding: 6px;
+  border: 1px solid #FB8122;
+  background: #FB8122;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 2px;
+}
+#searchButtonA {
+  background: #FB8122;
+  border-radius: 2px;
+}
+#gametop{
+  grid-area: 3/2/7/3;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1.5fr 1fr 1.5fr; 
+  grid-template-areas: 
+    "imgtopleft"
+    "titletopleft"
+    "imgbotleft"
+    "titlebotleft";
 }
 
-  #gamebot{
-    grid-area: 3/3/7/4;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: 7vh 1fr 7vh 1fr; 
-    grid-template-areas: 
-      "imgtoprigth"
-      "titletoprigth"
-      "imgbotrigth"
-      "titlebotrigth";
+#gamebot{
+  grid-area: 3/3/7/4;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1.5fr 1fr 1.5fr; 
+  grid-template-areas: 
+    "imgtoprigth"
+    "titletoprigth"
+    "imgbotrigth"
+    "titlebotrigth";
 }
-  .searchimg{
-     width: 90%;
-     height: 8vh;
-     justify-self: center;
-     align-self: center;
-     border-radius: 5px;
-     border: 2px solid #FB8122;
-  }
-  .searchp{
-    width: 100%;
-    color: seashell;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: Futura-Black;
-  }
-
-  .infos{
-    color: #fff;
-    font-family: Futura-Black;
-    display: flex;
-    justify-content: center;
-    font-size: 0.8rem;
-    padding-top: 1rem;
-  }
-  .infostitle{
-    color: #FB8122;
-    font-family: Futura-Black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  .infostitlename{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      color: #fff;
-      padding-top: 1rem;
-      text-align: justify;
-      text-justify: inter-word;
-  }
-
-  form {
-    width: 100vw;
-  }
-
-  #infosimg{
-    width: 100%;
-    border-radius: 5px;
-    grid-area: 2/2/3/4;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    border: 3px solid #FB8122;
-  }
-
-  #title{
-    grid-area: 3/2/4/4;
-    z-index: 3;
-  }
-
-  #categories{
-    grid-area: buttonsection1;
-    z-index: 3;
-  }
-
-  #developer{
-    grid-area: buttonsection2;
-    z-index: 3;
-  }
-
-  #userreviews{
-    grid-area: gamesection1;
-    z-index: 3;
-  }
-
-  #globalreviews{
-    grid-area: gamesection2;
-    z-index: 3;
-  }
-
-  #choosePage{
-    z-index: 3;
-  }
-
-  .containerChoose{
-    overflow: scroll;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 3;
-      grid-area: 2/2/7/4;
-      border: solid #FB8122 3px;
-      border-radius: 5px;
-      padding-top: 1rem;
-  }
-  #chooseImg{
-    width: 90%;
-  }
-
-  .searchForm{
-    width: 45vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .searchSearch{
-    width: 50%;
-    border: 2px solid #fb802200;
-    background-color: #fb802200;
-    color: #fb802200;
-    font-family:Futura-Black ;
-    border-radius: 2px;
-    z-index: 4;
-    padding: 8px 8px 8px 87px;
-    cursor: pointer;
-  }
-
-  .searchSearchHover{
-    display: flex;
-    align-items: center;
-    color: white;
-    font-family:Futura-Black ;
-    font-size: 0.7rem;
-    margin-top:-1.5rem ;
-    cursor: pointer;
-    user-select: none;
-    border: 2px solid #fb8022;
-    background-color: #fb8022;
-    padding: 8px 8px 8px 8px;
-    border-radius: 3px;
-    
-  }
-
-  .fas.fa-chevron-circle-right{
-    padding-left: 0.5rem;
-  }
-  .searchChoose{
-    border: 2px solid #FB8122;
-    background-color: #FB8122;
-    color: #fff;
-    font-family:Futura-Black;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    padding: 5px 5px 5px 5px;
-  }
-
-  .btnRandom{
-    grid-area: 7/2/8/4;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #btnRandom{
-    background-color:#FB8122 ;
-    border-radius: 5px;
-  }
-  #searchButtonRdm {
-    width: 100%;
-    height: 36px;
-    padding: 6px;
-    border-radius: 5px;
-    border: 1px solid #FB8122;
-    background: #FB8122;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 2px;
-    font-family:Futura-Black ;
-  }
-
-  #formChoose{
-    display: flex;
-    justify-content: center;
-  }
-
-  #steam{
-    z-index: 3;
-    grid-area: 6/2/8/4;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  #steamlogo{
-    margin-top: 5vh;
-  }
-
-  .infostitleSteam{
-    color: #FB8122;
-    font-family: Futura-Black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-top: 5vh;
-  }
-
-  #back{
-    z-index: 3;
-    grid-area: gamesection5;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-bottom: 2vh;
-    margin-left: 5vw;
-  }
-
-  /* Modal Section */
-
-  .button {
-    font-family: Futura-Black;
-    font-size: 1rem;
-    padding: 5px 10px;
-    background-color: none;
-    color: #FB8122;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
- }
-  .button:hover {
-    border-color: #999;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
- }
-  .button:active {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
- }
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity 200ms;
-    visibility: hidden;
-    opacity: 0;
- }
-  .overlay.light {
-    background: rgba(255, 255, 255, 0.5);
-    height: 120vh;
- }
-  .overlay .cancel {
-    position: absolute;
-    width: 100%;
-    height: 120vh;
-    cursor: default;
- }
-
- .content{
-   margin-top: 5vh;
- }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
- }
-  .popup {
-    background: #233237;
-    border: 3px solid #FB8122;
-    height: 80vh;
-    width: 80vw;
-    margin-top: 10vh;
-    margin-left: 10vw;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    position: relative;
- }
-  .light .popup {
-    border-color: #FB8122;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
- }
-  .popup h2 {
-    margin-top: 0;
-    color: #fff;
-    font-family: Futura-Black;
- }
-  .popup .close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    right: 20px;
-    opacity: 0.8;
-    transition: all 200ms;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
- }
-  .popup .close:hover {
-    opacity: 1;
- }
-
- .social {
-  width: 50vw;
+.searchimg{
+   width: 90%;
+   justify-self: center;
+   align-self: center;
+   border-radius: 5px;
+   border: 2px solid #FB8122;
+}
+.searchp{
+  width: 100%;
+  color: seashell;
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 5vh;
- }
-  .sociala{
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Futura-Black;
+}
+
+.infos{
+  color: #fff;
+  font-family: Futura-Black;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+.infostitle{
+  color: #FB8122;
+  font-family: Futura-Black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.infostitlename{
     display: flex;
-  }
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    padding-top: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+form {
+  width: 100vw;
+}
+
+#infosimg{
+  width: 100%;
+  border-radius: 5px;
+  z-index: 3;
+  border: 3px solid #FB8122;
+}
+
+#title{
+  grid-area: 2/2/4/4;
+  z-index: 3;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#categories{
+  grid-area: buttonsection1;
+  z-index: 3;
+}
+
+#developer{
+  grid-area: buttonsection2;
+  z-index: 3;
+}
+
+#userreviews{
+  grid-area: gamesection1;
+  z-index: 3;
+}
+
+#globalreviews{
+  grid-area: gamesection2;
+  z-index: 3;
+}
+
+#choosePage{
+  z-index: 3;
+}
+
+.containerChoose{
+  overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    grid-area: 2/2/7/4;
+    border: solid #FB8122 3px;
+    border-radius: 5px;
+    padding-top: 1rem;
+}
+#chooseImg{
+  width: 90%;
+}
+
+.searchForm{
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searchSearch{
+  width: 50%;
+  border: 2px solid #fb802200;
+  background-color: #fb802200;
+  color: #fb802200;
+  font-family:Futura-Black ;
+  border-radius: 2px;
+  z-index: 4;
+  padding: 8px 8px 8px 87px;
+  cursor: pointer;
+}
+
+.searchSearchHover{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family:Futura-Black ;
+  font-size: 0.7rem;
+  margin-top:-1.5rem ;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid #fb8022;
+  background-color: #fb8022;
+  padding: 8px 8px 8px 8px;
+  border-radius: 3px;
+  
+}
+
+.fas.fa-chevron-circle-right{
+  padding-left: 0.5rem;
+}
+.searchChoose{
+  border: 2px solid #fb802200;
+  background-color: #fb802200;
+  color: rgba(255, 255, 255, 0);
+  font-family:Futura-Black;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 5px 5px 5px 5px;
+  z-index:5;
+  padding-left:5rem ;
+}
+.searchChooseHover{
+  border: 2px solid #fb8022;
+  background-color: #fb8022;
+  color: rgb(255, 255, 255);
+  font-family:Futura-Black;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-top: -5vh;
+  margin-bottom: 2vh;
+  padding: 5px 5px 5px 5px;
+  z-index:3;
+}
+
+.btnRandom{
+  grid-area: 7/2/8/4;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnRandom{
+  background-color:#FB8122 ;
+  border-radius: 5px;
+  margin-left: 30vw;
+  grid-area: sectionfilter2;
+  z-index: 3;
+  align-self: center;
+  justify-self: center;
+}
+#searchButtonRdm {
+  width: 100%;
+  height: 36px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #FB8122;
+  background: #FB8122;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 2px;
+  font-family:Futura-Black ;
+}
+
+#btnRandom2{
+  background-color:#FB8122 ;
+  border-radius: 5px;
+  margin-left: 0vw;
+  grid-area: sectionfilter2;
+  z-index: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#formChoose{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#steam{
+  z-index: 3;
+  grid-area: 6/2/8/4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#steamlogo{
+  margin-top: 5vh;
+}
+
+.infostitleSteam{
+  color: #FB8122;
+  font-family: Futura-Black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 5vh;
+}
+
+#back{
+  z-index: 3;
+  grid-area: gamesection5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+}
+
+/* Modal Section */
+
+.button {
+  font-family: Futura-Black;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: none;
+  color: #FB8122;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.button:hover {
+  border-color: #999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay.light {
+  background: rgba(255, 255, 255, 0.5);
+  height: 120vh;
+}
+.overlay .cancel {
+  position: absolute;
+  width: 100%;
+  height: 120vh;
+  cursor: default;
+}
+.searchimgdiv{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.content{
+ margin-top: 5vh;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  background: #233237;
+  border: 3px solid #FB8122;
+  height: 80vh;
+  width: 80vw;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.light .popup {
+  border-color: #FB8122;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+.popup h2 {
+  margin-top: 0;
+  color: #fff;
+  font-family: Futura-Black;
+}
+.popup .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.popup .close:hover {
+  opacity: 1;
+}
+
+.social {
+width: 50vw;
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 5vh;
+}
+.sociala{
+  display: flex;
+}
 
 
 h2{
-  margin-bottom: 4vh;
+margin-bottom: 4vh;
 }
 
 .profil{
-  width: 100px;
-  margin-bottom: 2vh;
+width: 100px;
+margin-bottom: 2vh;
 }
 
-  .popup .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    color: #fff;
-    font-family: Futura-Black;
- }
-  .popup p {
-    margin: 0 0 1em;
- }
-  .popup p:last-child {
-    margin: 0;
- }
-
- /* -------error404_amogus---- */
-
- #amogus_404
- {
-   height: 100vh;
-   width: 100vw;
-   background-image: url(../images/amogus_bg.png);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
- }
-
- #amogus_404 img
- {
-   height: 20vh;
- }
-
- #amogus_404 div
- {
-   display: flex;
- }
-
- #amogus_404 a
- {
-   color: #fff;
-   font-family: "amogus";
-   margin-top: 5vh;
-   font-size: 3rem;
- }
-
- .error4
- {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(103%) contrast(103%);
- }
-
- #red_amogus
- {
-   position: absolute;
-   transform: rotateZ(45deg) scale(0.2);
-   bottom: 5vh;
-   right: 15vw;
- }
-
- /* -------error404_gta---- */
-
-#gta_404
- {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(../images/gta_bg.png);
-  background-position: center;
-  background-size: cover;
+.popup .content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  font-family: "gta";
-  font-size: 3rem;
-  color: #c05d63;
-  -webkit-text-stroke: 3px black;
+  overflow: auto;
+  color: #fff;
+  font-family: Futura-Black;
+}
+.popup p {
+  margin: 0 0 1em;
+}
+.popup p:last-child {
+  margin: 0;
+}
+/* -------error404_amogus---- */
+
+#amogus_404
+{
+ height: 100vh;
+ width: 100vw;
+ background-image: url(../images/amogus_bg.png);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+#amogus_404 img
+{
+ height: 15vh;
+}
+
+#amogus_404 div
+{
+ display: flex;
+}
+
+#amogus_404 a
+{
+ color: #fff;
+ margin-top: 5vh;
+ font-size: 3rem;
+ font-family: 'amogus';
+}
+
+.error4
+{
+filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(103%) contrast(103%);
+}
+
+#red_amogus
+{
+ position: absolute;
+ transform: rotateZ(45deg) scale(0.2);
+ bottom: 5vh;
+ right: 15vw;
+}
+
+/* -------error404_gta---- */
+
+#gta_404
+{
+height: 100vh;
+width: 100vw;
+background-image: url(../images/gta_bg.png);
+background-position: center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+font-family: "gta";
+font-size: 3rem;
+color: #c05d63;
+-webkit-text-stroke: 3px black;
 }
 
 #gta_404 a
 {
-  color: #c05d63;
+color: #c05d63;
 }
 
 /* -------error404_minecraft---- */
 
 #minecraft_404
- {
-  height: 100vh;
-  width: 100vw;
-  background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(255, 0, 0, 0.2)), url(../images/minecraft_bg.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "minecraft";
-  color: #ffffff;
+{
+height: 100vh;
+width: 100vw;
+background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(255, 0, 0, 0.2)), url(../images/minecraft_bg.png);
+background-position: center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: "minecraft";
+color: #ffffff;
 }
 
 #minecraft_404 div
 {
-  margin-top: 5vh;
-  display: flex;
-  flex-direction: column;
+margin-top: 5vh;
+display: flex;
+flex-direction: column;
 }
 
 #minecraft_404 span
 {
-  color: rgb(255, 238, 0);
+color: rgb(255, 238, 0);
 }
 
 #minecraft_404 h2
 {
-  margin: 0;
-  font-size: 2.5rem;
+margin: 0;
+font-size: 2.5rem;
 }
 
 #minecraft_404 a
 {
-  text-decoration: none;
-  width: 80vw;
-  height: 5vh;
-  margin-top: 2vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(71, 71, 71);
-  border: 2px solid black;
-  color: #ffffff;
-  font-size: 1.5rem;
+text-decoration: none;
+width: 80vw;
+height: 5vh;
+margin-top: 2vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(71, 71, 71);
+border: 2px solid black;
+color: #ffffff;
+font-size: 1.5rem;
 }
+@media all and (min-width: 1024px) and (max-width: 2560px){
 
- @media all and (min-width: 1024px) and (max-width: 2560px){
-
-    #accueil{
-        grid-area: 1/1/10/5;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1em 1fr 1fr 1em; 
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
-        grid-template-areas: 
-          "header header header header"
-          "espace1 sectionfilter1 sectionfilter2 espace2"
-          "espace3 sectionfilter3 sectionfilter4 espace4"
-          "espace5 buttonsection1 buttonsection2 espace6"
-          "espace7 gamesection1 gamesection2 espace8"
-          "espace9 gamesection3 gamesection4 espace10"
-          "espace11 gamesection5 gamesection6 espace12"
-          "footer footer footer footer"; 
-        z-index: 3;
-  }
-  #accueil :nth-child(1) {
-    margin-top: 0vh;
-    margin-bottom: 0vh;
-}
-    #logo{
-      grid-area: header;
-      width: 5vw;
-      justify-self: flex-start;
-      margin: 1rem 1rem;
-    }
-  
-    #logogg{
-      grid-area: 4/2/5/4;
-      justify-self: center;
-      width: 40vw;
-    }
-    #accueil :nth-child(2) {
-      margin-bottom: 0vh;
-    }
-    #btn-accueila{
-      grid-area: 5/2/6/4;
-      justify-self: center;
-      
-    }
-
-    #bg{
-      height:100vh;
-    }
-    .container{
-      overflow: hidden;
-    }
-
-    #searchzone{
-      width: 20vw;
-    }
-
-    #titlegg{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    #titleggSvg{
-      width: 30vw;
-    }
-    .searchimg{
-      width: 20vw;
-      height:15vh;
-    }
-    .searchimgdiv{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .searchForm{
-      display: flex;
-      justify-self: center;
-      align-self: center;
-      justify-content: center;
-      margin-top: 10vh;
-    }
-    .searchSearch{
-      margin: 0;
-      width: 10vw;
-    }
-    .searchp{
-      font-size: 1.5rem;
-    }
-
-    #chooseImg{
-      height: 25vh;
-      width: 30vw;
-      border-radius: 5px;
-      border:solid #FB8122
-    }
-    #search{
-      width: 10vw;
-    }
-    .containerChoose{
-      overflow: scroll;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  #accueil{
+      grid-area: 1/1/10/5;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1em 1fr 1fr 1em; 
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
+      grid-template-areas: 
+        "header header header header"
+        "espace1 sectionfilter1 sectionfilter2 espace2"
+        "espace3 sectionfilter3 sectionfilter4 espace4"
+        "espace5 buttonsection1 buttonsection2 espace6"
+        "espace7 gamesection1 gamesection2 espace8"
+        "espace9 gamesection3 gamesection4 espace10"
+        "espace11 gamesection5 gamesection6 espace12"
+        "footer footer footer footer"; 
       z-index: 3;
-      grid-area: 2/2/7/4;
-    }
-    .containerChoose::-webkit-scrollbar{
-      display: none;
-    }
+}
+#accueil :nth-child(1) {
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+}
+  #logo{
+    grid-area: header;
+    width: 5vw;
+    justify-self: flex-start;
+    margin: 1rem 1rem;
+  }
+  #btnRandom{
+    margin-right: 25vw;
+  }
+  #logogg{
+    grid-area: 4/2/5/4;
+    justify-self: center;
+    width: 40vw;
+  }
+  #accueil :nth-child(2) {
+    margin-bottom: 0vh;
+  }
+  #btn-accueila{
+    grid-area: 5/2/6/4;
+    justify-self: center;
+    
+  }
+  #bg{
+    height:50vh;
+    width: 50vw;
+  }
+  #btnRandom{
+    margin-left: 0vw;
+  }
+  .container{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
 
-    #formChoose{
-      display: flex;
-      justify-content: center;
-      width: 50vw;
-    }
+  /* .searchChooseHover{
+    margin-left: -5vw;
+  } */
 
-    #infosimg{
-      width: 45vw;
-      height: 35vh;
-      grid-area: 3/2/6/3;
-      align-self: center;
-    }
+  #searchzone{
+    width: 20vw;
+    margin-left: 0vw;
+  }
 
-    #title{
-      width: 50vw;
-      grid-area:sectionfilter4;
-    }
-    .infostitle.infostitlename{
-      font-size: 2rem;
-      color: #FB8122;
-    } 
-    .infos{
-      justify-self: space-between;
-      align-self: center;
-      font-size: 1rem;
+  #titlegg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  #titleggSvg{
+    width: 30vw;
+  }
+  .searchimg{
+    width: 20vw;
+    height:15vh;
+  }
+  .searchimgdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchForm{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin-top: 10vh;
+  }
+  .searchSearch{
+    margin: 0;
+    width: 10vw;
+  }
+  .searchp{
+    font-size: 1.5rem;
+  }
 
-    }
-    #categories{
-      width: 25vw;
-      margin-top: 5vh;
-      grid-area:buttonsection2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-    }
-    #developer{
-      width: 25vw;
-      margin-top: 5vh;
-      margin-left: 50%;
-      grid-area:buttonsection2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-    }
-    #userreviews{
-      width: 25vw;
-      grid-area:gamesection2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-      height: 40vh;
-    }
-    #globalreviews{
-      width: 25vw;
-      margin-left: 50%;
-      grid-area:gamesection2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-      height: 40vh;
-    }
-    #steam{
-      width: 50vw;
-      grid-area:gamesection4;
-    }
+  #chooseImg{
+    height: 25vh;
+    width: 30vw;
+    border-radius: 5px;
+    border:solid #FB8122
+  }
 
-    #amogus_404 a
-    {
-      text-decoration: none;
-      font-size: 5rem;
-      transition: 0.5s;
-      margin-top: 10vh;
-    }
+  .containerChoose{
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    grid-area: 2/2/7/4;
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  .containerChoose::-webkit-scrollbar{
+    display: none;
+  }
 
-    #amogus_404 a:hover
-    {
-      transform: scale(1.2);
-    }
+  #formChoose{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+  }
 
-    #gta_404 a
-    {
-      text-decoration: none;
-      transition: 0.5s;
-    }
+  #infosimg{
+    width: 45vw;
+    height: 35vh;
+    grid-area: 3/2/6/3;
+    align-self: center;
+  }
 
-    #gta_404
-    {
-      font-size: 5rem;
-    }
-
-    #gta_404 a:hover
-    {
-      transform: scale(1.2);
-    }
-
-    #minecraft_404 a
-    {
-      width: 55vw;
-      height: 7.5vh;
-      font-size: 2rem;
-    }
-
-    #minecraft_404 a:hover
-    {
-      background-color: rgb(110, 110, 110);
-    }
+  #title{
+    width: 50vw;
+    grid-area:sectionfilter4;
+  }
+  .infostitle.infostitlename{
+    font-size: 2rem;
+    color: #FB8122;
+  } 
+  .infos{
+    justify-self: space-between;
+    align-self: center;
+    font-size: 1rem;
+  }
+  
+  #categories{
+    width: 25vw;
+    margin-top: 5vh;
+    grid-area:buttonsection2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    border-right: #FB8122 solid 3px;
+    border-top: #FB8122 solid 3px;
 
   }
+  #developer{
+    width: 25vw;
+    margin-top: 5vh;
+    margin-left: 50%;
+    grid-area:buttonsection2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    border-left: #FB8122 solid 3px;
+    border-top: #FB8122 solid 3px;
+  }
+  #userreviews{
+    width: 25vw;
+    grid-area:gamesection2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 40vh;
+    border-right: #FB8122 solid 3px;
+  }
+  #globalreviews{
+    width: 25vw;
+    margin-left: 50%;
+    grid-area:gamesection2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 40vh;
+    border-left: #FB8122 solid 3px;
+  }
+  #steam{
+    width: 50vw;
+    grid-area:gamesection4;
+    border-top: #FB8122 solid 4px;
+  }
+
+#gametop{
+    border-right: solid  #FB8122;
+}
+
+#gamebot{
+    border-left: solid  #FB8122;
+}
+#amogus_404 a
+{
+text-decoration: none;
+font-size: 5rem;
+transition: 0.5s;
+margin-top: 10vh;
+}
+
+#amogus_404 a:hover
+{
+transform: scale(1.2);
+}
+
+#gta_404 a
+{
+text-decoration: none;
+transition: 0.5s;
+}
+
+#gta_404
+{
+font-size: 5rem;
+}
+
+#gta_404 a:hover
+{
+transform: scale(1.2);
+}
+
+#minecraft_404 a
+{
+width: 55vw;
+height: 7.5vh;
+font-size: 2rem;
+}
+
+#minecraft_404 a:hover
+{
+background-color: rgb(110, 110, 110);
+}
+
+}

@@ -16,12 +16,15 @@
 {% endblock %}
 
 {% block img %}
-        {% for gamesearch in gamesearchs %} 
+        {% for gamesearch in gamesearchs %}
+        <div id="contentpartone"> 
             <img id="infosimg"src="{{gamesearch.img_url}}">
             <section id="title">
             <p class="infostitle infostitlename"> {{gamesearch.names}}  </p>
             <p class="infos"> {{gamesearch.dates}} </p>
             </section>
+        </div>
+        <div id="contentparttwo">
             <section id="categories">
             <p class="infostitle">CATEGORY</p>
             <p class="infos"> {{gamesearch.categories}}</p>
@@ -41,7 +44,8 @@
             <section id="steam">
             <p class="infostitleSteam">STEAM PAGE :</p>
             <a target="_blank" href="{{gamesearch.link}}"><img id='steamlogo' src="public/assets/images/steam_logo.svg"></a>
-            </section>   
+            </section>
+        </div>   
         {% endfor %}
 {% endblock %}
 

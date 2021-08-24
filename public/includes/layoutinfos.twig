@@ -8,7 +8,9 @@
         <div id="filter"></div>
             <div class="container">{% block content %}{% endblock %}</div>
                 {% block logo %}{% endblock %}
-            {% block img %}{% endblock %}
+                <section id="infoscontent">
+                    {% block img %}{% endblock %}
+                </section>
             <div id="back">{% block back %}{% endblock %}</div>
     <footer>{% block footer %}{% endblock %}</footer>
     </div>

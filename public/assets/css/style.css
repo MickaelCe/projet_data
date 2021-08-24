@@ -239,18 +239,35 @@ form {
   width: 100vw;
 }
 
+#infoscontent
+{
+  grid-area: 2/2/10/4;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+#contentpartone
+{
+  height: 40%;
+  width: 100%;
+}
+
+#contentparttwo
+{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #infosimg{
   width: 100%;
   border-radius: 5px;
-  grid-area: 2/2/3/4;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
   border: 3px solid #FB8122;
 }
 
 #title{
-  grid-area: 3/2/4/4;
   z-index: 3;
   display:flex;
   justify-content: center;
@@ -259,27 +276,49 @@ form {
 }
 
 #categories{
-  grid-area: buttonsection1;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 27.5%;
 }
 
 #developer{
-  grid-area: buttonsection2;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 27.5%;
 }
 
 #userreviews{
-  grid-area: gamesection1;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 27.5%;
 }
 
 #globalreviews{
-  grid-area: gamesection2;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 27.5%;
+}
+
+#steam
+{
+  width: 100%;
+  height: 30%;
 }
 
 #choosePage{
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30%;
 }
 
 .containerChoose{
@@ -434,7 +473,6 @@ form {
   align-items: center;
   text-align: justify;
   text-justify: inter-word;
-  margin-top: 1rem;
 }
 
 #back{
@@ -854,79 +892,87 @@ font-size: 1.5rem;
     width: 50vw;
   }
 
+  #infoscontent
+  {
+    grid-area: 2/2/10/4;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #contentpartone
+  {
+    width: 47.5%;
+    height: 100%;
+  }
+
+  #contentparttwo
+  {
+    width: 47.5%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
   #infosimg{
-    width: 45vw;
-    height: 35vh;
-    grid-area: 3/2/6/3;
     align-self: center;
   }
 
-  #title{
-    width: 50vw;
-    grid-area:sectionfilter4;
+  #title
+  {
+    margin-top: 5%;
   }
+
   .infostitle.infostitlename{
     font-size: 2rem;
     color: #FB8122;
+    text-align: center;
   } 
   .infos{
     justify-self: space-between;
     align-self: center;
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .infostitle
+  {
+    justify-self: flex-start;
   }
   
   #categories{
-    width: 25vw;
-    margin-top: 5vh;
-    grid-area:buttonsection2;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-    border-right: #FB8122 solid 3px;
-    border-top: #FB8122 solid 3px;
-
   }
   #developer{
-    width: 25vw;
-    margin-top: 5vh;
-    margin-left: 50%;
-    grid-area:buttonsection2;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-    border-left: #FB8122 solid 3px;
-    border-top: #FB8122 solid 3px;
   }
   #userreviews{
-    width: 25vw;
-    grid-area:gamesection2;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-    height: 40vh;
-    border-right: #FB8122 solid 3px;
   }
   #globalreviews{
-    width: 25vw;
-    margin-left: 50%;
-    grid-area:gamesection2;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-    height: 40vh;
-    border-left: #FB8122 solid 3px;
   }
   #steam{
-    width: 50vw;
-    grid-area:gamesection4;
+    width: 100%;
     border-top: #FB8122 solid 4px;
   }
 

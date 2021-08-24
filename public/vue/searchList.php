@@ -10,7 +10,7 @@ include 'public/pdo/connexion.php';
     <li class="livesearch-item">
         <img src="<?php echo $game->img_url; ?>" id="liveSearchImg" alt="Games image" />
             <div>
-                <h3 id="liveSearchName" ><?php echo $game->names; ?></h3>   
+                <h3 id="liveSearchName"><?php echo $game->names; ?></h3>   
             </div>
     </li>
     

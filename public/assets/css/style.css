@@ -74,7 +74,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 15;
     background-color: #202b38;
     border-top: #FB8122 1px solid;
 }
@@ -238,6 +238,22 @@ footer {
   form {
     width: 100vw;
   }
+
+/* Not found element */
+
+  #h2notFound{
+    font-family: Futura-Black;
+    color: #fff;
+    justify-self: center;
+    margin-top: 3rem;
+  }
+
+  #imgNotFound{
+    margin-top: 12rem;
+  }
+
+
+
 
   #infosimg{
     width: 100%;

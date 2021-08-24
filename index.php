@@ -19,7 +19,9 @@ $router->map('GET', '/choose', function() {
 $router->map('GET', '/searchList', function() {
     require 'public/vue/searchList.php';
 });
-
+$router->map('GET', '/no_content', function() {
+    require 'public/vue/no_content.php';
+});
 
 $router->map('GET', '/[*]', function() {
     switch ($i=random_int(0,2)) {

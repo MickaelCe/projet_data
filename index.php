@@ -37,6 +37,7 @@ $router->map('GET', '/[*]', function() {
     }
 });
 
+
 $match = $router->match();
 if($match !== null){
     if (is_callable($match['target'])){

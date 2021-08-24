@@ -988,6 +988,26 @@ font-size: 1.5rem;
   {
     justify-self: flex-start;
   }
+
+  #steamlogo
+  {
+    transition: 0.3s;
+  }
+
+  #steamlogo:hover
+  {
+    transform: scale(1.3);
+  }
+
+  #searchButtonRdm
+  {
+    transition: 0.3s;
+  }
+
+  #searchButtonRdm:hover
+  {
+    transform: scale(1.5);
+  }
   
   #categories{
     width: 100%;

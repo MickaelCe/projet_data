@@ -45,6 +45,23 @@ body {
     "footer footer footer footer"; 
 }
 
+.wrapper2{
+  min-height: 100vh;
+  max-height: 115vh;
+  display: grid;
+  grid-template-columns: 1em 1fr 1fr 1em; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
+  grid-template-areas: 
+    "header header header header"
+    "espace1 sectionfilter1 sectionfilter2 espace2"
+    "espace3 sectionfilter3 sectionfilter4 espace4"
+    "espace5 buttonsection1 buttonsection2 espace6"
+    "espace7 gamesection1 gamesection2 espace8"
+    "espace9 gamesection3 gamesection4 espace10"
+    "espace11 gamesection5 gamesection6 espace12"
+    "footer footer footer footer"; 
+}
+
 #bg {
   margin:0;
   filter: saturate(0);
@@ -930,7 +947,7 @@ font-size: 1.5rem;
   .infos{
     justify-self: space-between;
     align-self: center;
-    font-size: 1rem;
+    font-size: 1.35rem;
     text-align: center;
   }
 

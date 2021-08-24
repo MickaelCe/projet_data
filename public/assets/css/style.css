@@ -28,6 +28,7 @@ body {
   background-color: #233237;
   overflow: hidden;
 }
+
 .wrapper{
   height: 100vh;
   display: grid;
@@ -44,36 +45,11 @@ body {
     "footer footer footer footer"; 
 }
 
-.wrapper2{
-  min-height: 100vh;
-  max-height: 125vh;
-  display: grid;
-  grid-template-columns: 1em 1fr 1fr 1em; 
-  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 5vh; 
-  grid-template-areas: 
-    "header header header header"
-    "espace1 sectionfilter1 sectionfilter2 espace2"
-    "espace3 sectionfilter3 sectionfilter4 espace4"
-    "espace5 buttonsection1 buttonsection2 espace6"
-    "espace7 gamesection1 gamesection2 espace8"
-    "espace9 gamesection3 gamesection4 espace10"
-    "espace11 gamesection5 gamesection6 espace12"
-    "footer footer footer footer"; 
-}
-
-.bg {
+#bg {
   margin:0;
   filter: saturate(0);
   width: 100vw;
   height: 20vh;
-  margin-top: -5px;
-}
-
-.bg2 {
-  margin:0;
-  filter: saturate(0);
-  width: 100vw;
-  min-height: 20vh;
   margin-top: -5px;
 }
 
@@ -151,27 +127,30 @@ color: #FB8122;
 }
 
 #searchzone{
-  z-index: 3;
   grid-area: 2/2/3/4;
+  
   align-self: center;
   justify-self: center;
   display: flex;
-  width: 80%;
+  width: 72vw;
   margin-left: -15vw;
+  z-index: 9;
+  
 }
 
 #search{
-  width: 76%;
   height: 32px;
+  width: 90%;
   margin-right: -5px;
-  border: 2px solid #FB8122;
-  border-radius: 2px;
   padding-left: 5px;
+  border: 2px solid #FB8122;
+  border-radius: 3px;
+}
+#search:focus{
+  outline:0;
 }
 
-
 #searchButton {
-  width: 22%;
   height: 36px;
   padding: 6px;
   border: 1px solid #FB8122;
@@ -189,56 +168,31 @@ color: #FB8122;
 #gametop{
   grid-area: 3/2/7/3;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 7vh 1fr 7vh 1fr; 
+  grid-template-areas: 
+    "imgtopleft"
+    "titletopleft"
+    "imgbotleft"
+    "titlebotleft";
 }
 
 #gamebot{
   grid-area: 3/3/7/4;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 7vh 1fr 7vh 1fr; 
+  grid-template-areas: 
+    "imgtoprigth"
+    "titletoprigth"
+    "imgbotrigth"
+    "titlebotrigth";
 }
-
-#gametop div:nth-child(1)
-{
-  grid-area: 3/2/5/3;
-}
-
-#gametop div:nth-child(2)
-{
-  grid-area: 5/2/7/3;
-}
-
-#gamebot div:nth-child(1)
-{
-  grid-area: 3/3/5/4;
-}
-
-#gamebot div:nth-child(2)
-{
-  grid-area: 5/3/7/4;
-}
-
-.searchdiv
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 45%;
-  width: 100%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-}
-
 .searchimg{
    width: 90%;
+   height: 8vh;
    justify-self: center;
    align-self: center;
    border-radius: 5px;
@@ -288,12 +242,15 @@ form {
 #infosimg{
   width: 100%;
   border-radius: 5px;
+  grid-area: 2/2/3/4;
   z-index: 3;
+  width: 100%;
+  height: 100%;
   border: 3px solid #FB8122;
 }
 
 #title{
-  grid-area: 2/2/4/4;
+  grid-area: 3/2/4/4;
   z-index: 3;
   display:flex;
   justify-content: center;
@@ -374,7 +331,10 @@ form {
   background-color: #fb8022;
   padding: 8px 8px 8px 8px;
   border-radius: 3px;
-  
+}
+.searchSearchHover:hover{
+  background-color: #e66401;
+  border: 2px solid #e66401;
 }
 
 .fas.fa-chevron-circle-right{
@@ -463,7 +423,7 @@ form {
 }
 
 #steamlogo{
-  margin-top: 5vh;
+  margin-top: 1rem;
 }
 
 .infostitleSteam{
@@ -474,7 +434,7 @@ form {
   align-items: center;
   text-align: justify;
   text-justify: inter-word;
-  margin-top: 5vh;
+  margin-top: 1rem;
 }
 
 #back{
@@ -483,7 +443,7 @@ form {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-bottom: 2vh;
+  margin-bottom: 1rem;
   margin-left: 5vw;
 }
 
@@ -499,6 +459,7 @@ form {
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
+
 .button:hover {
   border-color: #999;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -527,7 +488,7 @@ form {
   height: 120vh;
   cursor: default;
 }
-.searchimg{
+.searchimgdiv{
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -610,6 +571,40 @@ margin-bottom: 2vh;
 .popup p:last-child {
   margin: 0;
 }
+
+.searchProp{
+ display: none;
+ background-color: white;
+ border:solid 2px #FB8122;
+ position:absolute;
+ width:72vw;
+ margin-top: 32px;
+}
+.livesearch-item{
+display: flex;
+align-items: center;
+padding: 0.5rem;
+border-bottom: solid 2px #FB8122;
+background-color: #233237;
+}
+
+.livesearch-item:hover{
+background-color: #1b262a;
+cursor: pointer;
+}
+
+
+#liveSearchImg{
+width: 6rem;
+}
+#liveSearchName{
+font-family: "Futura Black";
+font-size: 0.7rem;
+margin-left: 10px;
+color: white;
+}
+
+
 /* -------error404_amogus---- */
 
 #amogus_404
@@ -786,6 +781,10 @@ font-size: 1.5rem;
     overflow: hidden;
   }
 
+  .searchProp{
+    width:20vw;
+  }
+
   /* .searchChooseHover{
     margin-left: -5vw;
   } */
@@ -805,17 +804,19 @@ font-size: 1.5rem;
   }
   .searchimg{
     width: 20vw;
+    height:15vh;
   }
-  /* .searchimgdiv{
+  .searchimgdiv{
     display: flex;
     flex-direction: column;
     align-items: center;
-  } */
+  }
   .searchForm{
     display: flex;
     justify-self: center;
     align-self: center;
     justify-content: center;
+    margin-top: 10vh;
   }
   .searchSearch{
     margin: 0;

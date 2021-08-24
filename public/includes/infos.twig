@@ -11,34 +11,34 @@
 
 {% block content %}
     {% for game in games %}
-        <img class="bg" src="{{game.img_url}}">
+        <img id="bg" src="{{game.img_url}}">
     {% endfor %}
 {% endblock %}
 
 {% block img %}
         {% for gamesearch in gamesearchs %} 
-            <section id="title">
             <img id="infosimg"src="{{gamesearch.img_url}}">
+            <section id="title">
             <p class="infostitle infostitlename"> {{gamesearch.names}}  </p>
             <p class="infos"> {{gamesearch.dates}} </p>
             </section>
-            <section id="categories" class="allinfo">
+            <section id="categories">
             <p class="infostitle">CATEGORY</p>
             <p class="infos"> {{gamesearch.categories}}</p>
             </section>
-            <section id="developer" class="allinfo">
+            <section id="developer">
             <p class="infostitle">DEVELOPER</p>
             <p class="infos"> {{gamesearch.developer }}</p>
             </section>
-            <section id="userreviews" class="allinfo">
+            <section id="userreviews">
             <p class="infostitle">USER REVIEWS</p>
             <p class="infos"> {{gamesearch.user_reviews}}</p>
             </section>
-            <section id="globalreviews" class="allinfo">
+            <section id="globalreviews">
             <p class="infostitle">ALL REVIEWS</p>
             <p class="infos"> {{gamesearch.all_reviews }}</p>
             </section>
-            <section id="steam" class="allinfo">
+            <section id="steam">
             <p class="infostitleSteam">STEAM PAGE :</p>
             <a target="_blank" href="{{gamesearch.link}}"><img id='steamlogo' src="public/assets/images/steam_logo.svg"></a>
             </section>   

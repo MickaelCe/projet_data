@@ -20,6 +20,9 @@ $router->map('GET', '/infos', function() {
 $router->map('GET', '/choose', function() {
    require 'public/controller/controller_choose.php';
 });
+$router->map('GET', '/searchList', function() {
+   require 'public/controller/controller_search_list.php';
+});
 
 $match = $router->match();
 if(is_array($match)){

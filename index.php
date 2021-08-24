@@ -16,6 +16,11 @@ $router->map('GET', '/infos', function() {
 $router->map('GET', '/choose', function() {
     require 'public/controleur/controleurChoose.php';
 });
+$router->map('GET', '/searchList', function() {
+    require 'public/vue/searchList.php';
+});
+
+
 $router->map('GET', '/[*]', function() {
     switch ($i=random_int(0,2)) {
         case 0:

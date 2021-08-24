@@ -1,23 +1,25 @@
 
-console.log("Search page loaded");
-let search = document.querySelector("#search");
+const sec = document.querySelector('#section')
+const search = document.querySelector('#search')
+const results = document.querySelector('.result')
+const searchdiv = document.querySelector('.search')
+const livesearch = document.querySelector('.livesearch-item')
 
-
-search.addEventListener("keyup", function(){
-    ajaxSearch();
+search.addEventListener('keyup', (e) => {    
+    let searchValue = document.querySelector('#search').value
+        if (searchValue !== '') {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'searchList?name='+searchValue, true)
+            xhr.onload = function(){
+                document.querySelector('.searchProp').style.display = 'block'
+                sec.innerHTML = this.responseText; 
+            }
+            xhr.send();
+        } else if(searchValue === ''){
+            document.querySelector('.searchProp').style.display = 'none'
+            console.log('je suis vide')
+        }
+    console.log(searchValue)
 })
 
-function ajaxSearch() {
-    let searchValue = document.querySelector("#search").value;
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", "public/vue/search.php" + searchValue);
-    xhr.onload = function() {
-        if(xhr.status === 200){
-            document.querySelector("#content").innerHTML = xhr.responseText;
-            console.log(xhr.status);
-        } else {
-            console.log(xhr.status);
-        }
-    }
-    xhr.send();
-}
+livesearch

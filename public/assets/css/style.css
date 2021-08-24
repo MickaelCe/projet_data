@@ -28,6 +28,7 @@ body {
     background-color: #233237;
     overflow: hidden;
 }
+
 .wrapper{
     height: 100vh;
     display: grid;
@@ -126,27 +127,30 @@ footer {
 }
 
 #searchzone{
-    z-index: 3;
     grid-area: 2/2/3/4;
+    
     align-self: center;
     justify-self: center;
     display: flex;
-    width: 80%;
+    width: 72vw;
     margin-left: -15vw;
+    z-index: 9;
+    
 }
 
 #search{
-    width: 76%;
     height: 32px;
+    width: 90%;
     margin-right: -5px;
-    border: 2px solid #FB8122;
-    border-radius: 2px;
     padding-left: 5px;
+    border: 2px solid #FB8122;
+    border-radius: 3px;
+}
+#search:focus{
+    outline:0;
 }
 
-
 #searchButton {
-    width: 22%;
     height: 36px;
     padding: 6px;
     border: 1px solid #FB8122;
@@ -327,7 +331,10 @@ footer {
     background-color: #fb8022;
     padding: 8px 8px 8px 8px;
     border-radius: 3px;
-    
+  }
+  .searchSearchHover:hover{
+    background-color: #e66401;
+    border: 2px solid #e66401;
   }
 
   .fas.fa-chevron-circle-right{
@@ -416,7 +423,7 @@ footer {
   }
 
   #steamlogo{
-    margin-top: 5vh;
+    margin-top: 1rem;
   }
 
   .infostitleSteam{
@@ -427,7 +434,7 @@ footer {
     align-items: center;
     text-align: justify;
     text-justify: inter-word;
-    margin-top: 5vh;
+    margin-top: 1rem;
   }
 
   #back{
@@ -436,7 +443,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-bottom: 2vh;
+    margin-bottom: 1rem;
     margin-left: 5vw;
   }
 
@@ -452,6 +459,7 @@ footer {
     cursor: pointer;
     transition: all 0.2s ease-out;
  }
+
   .button:hover {
     border-color: #999;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -563,6 +571,40 @@ h2{
   .popup p:last-child {
     margin: 0;
  }
+
+ .searchProp{
+   display: none;
+   background-color: white;
+   border:solid 2px #FB8122;
+   position:absolute;
+   width:72vw;
+   margin-top: 32px;
+ }
+ .livesearch-item{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: solid 2px #FB8122;
+  background-color: #233237;
+}
+
+.livesearch-item:hover{
+  background-color: #1b262a;
+  cursor: pointer;
+}
+
+
+ #liveSearchImg{
+  width: 6rem;
+ }
+ #liveSearchName{
+  font-family: "Futura Black";
+  font-size: 0.7rem;
+  margin-left: 10px;
+  color: white;
+ }
+
+
   /* -------error404_amogus---- */
 
  #amogus_404
@@ -737,6 +779,10 @@ h2{
       flex-direction:column;
       flex-wrap: wrap;
       overflow: hidden;
+    }
+
+    .searchProp{
+      width:20vw;
     }
 
     /* .searchChooseHover{

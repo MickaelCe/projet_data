@@ -18,6 +18,27 @@
 
 
 
+
+
+
+
+{% block input %}
+    <form id="searchzone" name="myform" action='choose' method='get' >
+    <input type="text" id="search" name='id' placeholder="Search" value="" autocomplete="off">
+    <div class="searchProp">
+    <div id='section'>
+    </div>
+    </div>
+    <button type="submit" id="searchButton" >
+        <i class="fa fa-search"></i>
+     </button>
+
+     
+    </form>
+    
+    <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
+{% endblock %}
+
 {% block contentsearch %}
     {% for gamesearch in gamesearchs %}
         <div class='searchimgdiv'>
@@ -48,18 +69,6 @@
     {% endfor %}
 {% endblock %}
 
-
-
-{% block input %}
-    <form id="searchzone" name="myform" action='choose' method='get'>
-    <input type="text" id="search" name='id' placeholder="Search" value="">
-    <button type="submit" id="searchButton" >
-        <i class="fa fa-search"></i>
-     </button>
-     
-    </form>
-    <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
-{% endblock %}
 
 {% block btnRandom %}
     

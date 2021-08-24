@@ -3,16 +3,16 @@
     <head>
   {% block head %}{% endblock %} 
     </head>
-    <body>
+    <body id="body">
     <div class="wrapper2">
-        <div id="filter"></div>
+        <div id="filter2"></div>
             <div class="container">{% block content %}{% endblock %}</div>
                 {% block logo %}{% endblock %}
                 <section id="infoscontent">
                     {% block img %}{% endblock %}
                 </section>
             <div id="back">{% block back %}{% endblock %}</div>
-    <footer>{% block footer %}{% endblock %}</footer>
+    <footer id="footerinfos">{% block footer %}{% endblock %}</footer>
     </div>
 </body>
 </html>

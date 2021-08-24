@@ -29,6 +29,11 @@ body {
   overflow: hidden;
 }
 
+#body
+{
+  overflow: unset;
+}
+
 .wrapper{
   height: 100vh;
   display: grid;
@@ -46,8 +51,7 @@ body {
 }
 
 .wrapper2{
-  min-height: 100vh;
-  max-height: 115vh;
+  height: 120vh;
   display: grid;
   grid-template-columns: 1em 1fr 1fr 1em; 
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5vh; 
@@ -85,6 +89,14 @@ body {
   z-index: 2;
 }
 
+#filter2 {
+  background-color: #202b38c9;
+  height: 120vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
 footer {
   font-size: 1rem;
   grid-area: footer;
@@ -99,6 +111,7 @@ footer {
   color: white;
   font-family: Futura-Black;
 }
+
 #accueil{
   grid-area: 1/2/10/4;
   display: flex;
@@ -297,7 +310,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  height: 27.5%;
+  height: 30%;
 }
 
 #developer{
@@ -305,7 +318,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  height: 27.5%;
+  height: 30%;
 }
 
 #userreviews{
@@ -313,7 +326,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  height: 27.5%;
+  height: 25%;
 }
 
 #globalreviews{
@@ -321,7 +334,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  height: 27.5%;
+  height: 25%;
 }
 
 #steam
@@ -490,6 +503,11 @@ form {
   align-items: center;
   text-align: justify;
   text-justify: inter-word;
+}
+
+#title .infos 
+{
+  padding: 0;
 }
 
 #back{
@@ -796,6 +814,20 @@ font-size: 1.5rem;
         "footer footer footer footer"; 
       z-index: 3;
 }
+
+.wrapper2{
+  height: 100vh; 
+}
+
+.filter2{
+  height: 100vh; 
+}
+
+#body
+{
+  overflow: hidden;
+}
+
 #accueil :nth-child(1) {
   margin-top: 0vh;
   margin-bottom: 0vh;
@@ -839,10 +871,6 @@ font-size: 1.5rem;
   .searchProp{
     width:20vw;
   }
-
-  /* .searchChooseHover{
-    margin-left: -5vw;
-  } */
 
   #searchzone{
     width: 20vw;
@@ -914,6 +942,11 @@ font-size: 1.5rem;
     grid-area: 2/2/10/4;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  #title .infos 
+  {
+    margin-top: 2vh;
   }
 
   #contentpartone

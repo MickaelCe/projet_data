@@ -27,7 +27,7 @@
         <div id="contentparttwo">
             <section id="categories">
             <p class="infostitle">CATEGORY</p>
-            <p class="infos"> {{gamesearch.categories}}</p>
+            <p class="infos"> {{gamesearch.categories | truncate(75,true,"...")}}</p>
             </section>
             <section id="developer">
             <p class="infostitle">DEVELOPER</p>

@@ -35,37 +35,17 @@
 
 {% block contentsearch %}
     {% for gamesearch in gamesearchs %}
+    <section>
         <div class='searchimgdiv'>
         <img class='searchimg' src="{{gamesearch.img_url}}">
+        </div>
         <p class ='searchp'>{{gamesearch.names | truncate(40,true,"...")}}</p>
-        </div>
-        <form class='searchForm' action='infos' method='get'>
+        <form class='searchForm' action='infos' method='get'> 
             <input type="submit" class="searchSearch" name='id' value ="{{gamesearch.id}}">
-            <p class='searchSearchHover'>More Infos <i class="fas fa-chevron-circle-right"></i></p>
+            <p class='searchSearchHover'> More Infos <i class="fas fa-chevron-circle-right"></i></p>
         </form>
-        
+    </section>
     {% endfor %}
-{% endblock %}
-
-
-
-{% block contentsearch2 %}
-    {% for gamesearch2 in gamesearchs2 %}
-        <div class='searchimgdiv'>
-        <img class='searchimg' src="{{gamesearch2.img_url}}">
-        <p class ='searchp'>{{gamesearch2.names  | truncate(40,true,"...")}}</p>
-        </div>
-        <form class='searchForm' action='infos' method='get'>
-            <input type="submit" class="searchSearch" name='id' value ="{{gamesearch2.id}}">
-            <p class='searchSearchHover' unselectable="on">More Infos <i class="fas fa-chevron-circle-right"></i></p>
-        </form>
-        
-    {% endfor %}
-{% endblock %}
-
-
-{% block btnRandom %}
-    
 {% endblock %}
 
 {% block logo %}

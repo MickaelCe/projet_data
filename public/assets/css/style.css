@@ -195,46 +195,40 @@ color: #FB8122;
   background: #FB8122;
   border-radius: 2px;
 }
-#gametop{
-  grid-area: 3/2/7/3;
+#allgamesearch{
+  grid-area: 3/2/8/4;
   z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: 7vh 1fr 7vh 1fr; 
-  grid-template-areas: 
-    "imgtopleft"
-    "titletopleft"
-    "imgbotleft"
-    "titlebotleft";
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#gamebot{
-  grid-area: 3/3/7/4;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: 7vh 1fr 7vh 1fr; 
-  grid-template-areas: 
-    "imgtoprigth"
-    "titletoprigth"
-    "imgbotrigth"
-    "titlebotrigth";
+#allgamesearch section
+{
+  width: 50%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
+
 .searchimg{
    width: 90%;
-   height: 8vh;
    justify-self: center;
    align-self: center;
    border-radius: 5px;
    border: 2px solid #FB8122;
 }
 .searchp{
-  width: 100%;
+  width: 95%;
   color: seashell;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   font-family: Futura-Black;
+  text-align: center;
 }
 
 .infos{
@@ -279,13 +273,13 @@ form {
 
 #contentpartone
 {
-  height: 40%;
+  height: 45%;
   width: 100%;
 }
 
 #contentparttwo
 {
-  height: 60%;
+  height: 55%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -368,46 +362,47 @@ form {
 }
 
 .searchForm{
-  width: 45vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 55%;
+  height: 12.5%;
+  color: white;
+  font-family:Futura-Black ;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: 2px solid #fb8022;
+  background-color: #fb8022;
+  border-radius: 3px;
+  position: relative;
 }
 
 .searchSearch{
-  width: 50%;
+  width: 100%;
+  height: 100%;
   border: 2px solid #fb802200;
   background-color: #fb802200;
   color: #fb802200;
   font-family:Futura-Black ;
   border-radius: 2px;
   z-index: 4;
-  padding: 8px 8px 8px 87px;
   cursor: pointer;
+  position: absolute;
 }
 
 .searchSearchHover{
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  color: white;
-  font-family:Futura-Black ;
-  font-size: 0.7rem;
-  margin-top:-1.5rem ;
-  cursor: pointer;
+  justify-content: center;
   user-select: none;
-  border: 2px solid #fb8022;
-  background-color: #fb8022;
-  padding: 8px 8px 8px 8px;
-  border-radius: 3px;
 }
+
 .searchSearchHover:hover{
   background-color: #e66401;
   border: 2px solid #e66401;
 }
 
 .fas.fa-chevron-circle-right{
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 .searchChoose{
   border: 2px solid #fb802200;
@@ -859,7 +854,7 @@ font-size: 1.5rem;
     width: 50vw;
   }
   #btnRandom{
-    margin-left: 0vw;
+    margin-left: 16vw;
   }
   .container{
     display:flex;
@@ -873,7 +868,7 @@ font-size: 1.5rem;
   }
 
   #searchzone{
-    width: 20vw;
+    width: 40vw;
     margin-left: 0vw;
   }
 
@@ -887,7 +882,6 @@ font-size: 1.5rem;
   }
   .searchimg{
     width: 20vw;
-    height:15vh;
   }
   .searchimgdiv{
     display: flex;
@@ -895,15 +889,13 @@ font-size: 1.5rem;
     align-items: center;
   }
   .searchForm{
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    justify-content: center;
-    margin-top: 10vh;
+    width: 15%;
   }
-  .searchSearch{
+
+  #allgamesearch section
+  {
     margin: 0;
-    width: 10vw;
+    height: 47.5%;
   }
   .searchp{
     font-size: 1.5rem;
@@ -1046,13 +1038,11 @@ font-size: 1.5rem;
     border-top: #FB8122 solid 4px;
   }
 
-#gametop{
-    border-right: solid  #FB8122;
-}
+/* #allgamesearch
+{
+  grid-area: 3/2/7/4;
+} */
 
-#gamebot{
-    border-left: solid  #FB8122;
-}
 #amogus_404 a
 {
 text-decoration: none;

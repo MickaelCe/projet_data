@@ -58,6 +58,7 @@ body {
     margin:0;
     width: 100vw;
     grid-area: 1/1/10/5;
+    filter: blur(0.3rem);
 }
 
 #filter {
@@ -161,6 +162,12 @@ footer {
     font-size: 20px;
     border-radius: 2px;
   }
+  #searchButton:hover {
+    border: 1px solid #e66401;
+    background: #e66401;
+    cursor: pointer;
+  }
+  
   #searchButtonA {
     background: #FB8122;
     border-radius: 2px;
@@ -250,6 +257,7 @@ footer {
 
   #imgNotFound{
     margin-top: 12rem;
+    animation: float 6s infinite;
   }
 
 
@@ -398,6 +406,12 @@ footer {
     align-self: center;
     justify-self: center;
   }
+
+  #searchButtonRdm:hover{
+    border: 1px solid #e66401;
+    background-color:#e66401;
+  }
+
   #searchButtonRdm {
     width: 100%;
     height: 36px;
@@ -442,6 +456,21 @@ footer {
     margin-top: 1rem;
   }
 
+  #logo{
+    animation : float 6s ease infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
   .infostitleSteam{
     color: #FB8122;
     font-family: Futura-Black;
@@ -766,10 +795,12 @@ h2{
       width: 5vw;
       justify-self: flex-start;
       margin: 1rem 1rem;
+      animation-name:float;
+      animation: infinite;
+
     }
-    #btnRandom{
-      margin-right: 25vw;
-    }
+  
+
     #logogg{
       grid-area: 4/2/5/4;
       justify-self: center;
@@ -795,6 +826,7 @@ h2{
       flex-direction:column;
       flex-wrap: wrap;
       overflow: hidden;
+      filter: blur(0.3rem);
     }
 
     .searchProp{

@@ -20,17 +20,15 @@
     <form id="searchzone" name="myform" action='choose' method='get' >
     <input type="text" id="search" name='names' placeholder="Search" value="" autocomplete="off">
     <div class="searchProp">
-    <div id='section'>
-    </div>
     </div>
     <button type="submit" id="searchButton" >
         <i class="fa fa-search"></i>
      </button>
 
-     
     </form>
     
-    <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
+     <a href ='search' id='btnRandom'><button id="searchButtonRdm"><i class="fas fa-redo-alt"></i></button></a>
+    
 {% endblock %}
 
 {% block contentsearch %}
@@ -39,7 +37,7 @@
         <div class='searchimgdiv'>
         <img class='searchimg' src="{{gamesearch.img_url}}">
         </div>
-        <p class ='searchp'>{{gamesearch.names | truncate(40,true,"...")}}</p>
+        <p class ='searchp'>{{gamesearch.names | truncate(35,true,"...")}}</p>
         <form class='searchForm' action='infos' method='get'> 
             <input type="submit" class="searchSearch" name='id' value ="{{gamesearch.id}}">
             <p class='searchSearchHover'> More Infos <i class="fas fa-chevron-circle-right"></i></p>
@@ -49,7 +47,7 @@
 {% endblock %}
 
 {% block logo %}
-            <a href = '/projet_data_v1' id='titlegg' ><img id='titleggSvg'src="public/assets/images/gamersgate.svg"></a>
+            <a href = '/projet_data' id='titlegg' ><img id='titleggSvg'src="public/assets/images/gamersgate.svg"></a>
 {% endblock %}
 
 {% block footer %}

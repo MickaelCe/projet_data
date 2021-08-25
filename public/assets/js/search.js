@@ -1,4 +1,4 @@
-const sec = document.querySelector('#section')
+const sec = document.querySelector('.searchProp')
 const search = document.querySelector('#search')
 const results = document.querySelector('.result')
 const searchdiv = document.querySelector('.search')
@@ -10,7 +10,7 @@ search.addEventListener('keyup', (e) => {
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'searchList?name='+searchValue, true)
             xhr.onload = function(){
-                document.querySelector('.searchProp').style.display = 'block'
+                sec.style.display = 'block'
                 sec.innerHTML = this.responseText; 
             }
             xhr.send();

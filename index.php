@@ -23,6 +23,9 @@ $router->map('GET', '/choose', function() {
 $router->map('GET', '/searchList', function() {
    require 'public/controller/controller_search_list.php';
 });
+$router->map('GET', '/no_content', function() {
+   require 'public/vue/no_content.php';
+});
 
 $match = $router->match();
 if(is_array($match)){

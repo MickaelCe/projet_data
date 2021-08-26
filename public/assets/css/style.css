@@ -79,6 +79,7 @@ body {
   margin:0;
   width: 100vw;
   grid-area: 1/1/10/5;
+  filter: blur(0.3rem);
 }
 
 #filter {
@@ -176,6 +177,18 @@ color: #FB8122;
   display: flex;
   align-items: center;
   position: relative;
+}
+
+#h2notFound{
+  font-family: Futura-Black;
+  color: #fff;
+  justify-self: center;
+  margin-top: 3rem;
+}
+
+#imgNotFound{
+  margin-top: 12rem;
+  animation: float 6s infinite;
 }
 
 #search{
@@ -506,6 +519,22 @@ form {
 
 #steamlogo{
   margin-top: 1rem;
+}
+
+#logo{
+  animation : float 6s ease infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .infostitleSteam{

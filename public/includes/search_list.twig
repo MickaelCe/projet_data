@@ -3,10 +3,13 @@
         {% for gamesearch in games %} 
 
         <li class="livesearch-item">
-            <img src="{{gamesearch.img_url}}" id="liveSearchImg" alt="Games image" />
-            <div>
-                <h3 id="liveSearchName" >{{gamesearch.names | truncate(35,true,"...")}}</h3>   
-            </div>
+            <form class="livesearchform" action='choose' method='get'>
+                <img src="{{gamesearch.img_url}}" class="liveSearchImg" alt="Games image" />
+                <div>
+                    {# <h3 class="liveSearchName" >{{gamesearch.names | truncate(35,true,"...")}}</h3>  #}
+                    <input type="submit" class="liveSearchName" name='names' value ="{{gamesearch.names | truncate(35,true,"...")}}"  
+                </div>
+            </form>
         </li>
    
         {% endfor %}

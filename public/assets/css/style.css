@@ -142,10 +142,12 @@ color: #FB8122;
   font-size: 2rem;
   cursor: pointer;
   padding: 7px 20px 7px 20px;
+  transition: 0.3s;
 }
 
 #btn-accueil:hover{
-color: #FB8122;
+  transform: scale(1.2);
+  color: #FB8122;
   background-color: rgb(255, 255, 255);
 }
 
@@ -365,8 +367,17 @@ form {
     border-radius: 5px;
     padding-top: 1rem;
 }
-#chooseImg{
+
+#chooseSection
+{
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chooseImg{
+  width: 100%;
 }
 
 .searchForm{
@@ -380,6 +391,20 @@ form {
   background-color: #fb8022;
   border-radius: 3px;
   position: relative;
+}
+
+.searchForm2{
+  width: 35%;
+  height: 20px;
+  color: white;
+  font-family:Futura-Black ;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: 2px solid #fb8022;
+  background-color: #fb8022;
+  border-radius: 3px;
+  position: relative;
+  margin: 1rem 0;
 }
 
 .searchSearch{
@@ -438,6 +463,17 @@ form {
   border-radius: 5px;
   z-index: 3;
 }
+
+#btnRandom2
+{
+  transition: 0.3s;
+}
+
+#btnRandom2:hover
+{
+  transform: scale(1.3);
+}
+
 #searchButtonRdm {
   width: 100%;
   height: 36px;
@@ -639,20 +675,44 @@ border-bottom: solid 2px #FB8122;
 background-color: #233237;
 }
 
+.livesearch-item div
+{
+  width: 55%;
+  height: 40px
+}
+
 .livesearch-item:hover{
 background-color: #1b262a;
 cursor: pointer;
 }
 
 
-#liveSearchImg{
+.liveSearchImg{
 width: 6rem;
 }
-#liveSearchName{
+.liveSearchName{
+width: 100%;
+height: 100%;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 0.7rem;
 margin-left: 10px;
 color: white;
+background: none;
+border: none;
+text-align: left;
+}
+
+.liveSearchName:hover
+{
+  cursor: pointer;
+}
+
+.livesearchform
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -890,11 +950,21 @@ font-size: 1.5rem;
     transform: scale(1.2);
   }
 
+  .livesearch-item div
+  {
+    width: 75%;
+  }
+
   #chooseImg{
-    height: 25vh;
-    width: 30vw;
+    width: 75%;
     border-radius: 5px;
     border:solid #FB8122
+  }
+
+  .searchForm2
+  {
+    width: 15%;
+    height: 25px;
   }
 
   .containerChoose{
